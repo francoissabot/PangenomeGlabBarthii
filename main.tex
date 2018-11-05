@@ -84,12 +84,13 @@ Nguyet Dang\textsuperscript{1,2\textdagger},
 Christine Tranchant-Dubreuil\textsuperscript{1,2\textdagger},
 Stefan Engelen\textsuperscript{3},
 Karine Labadie\textsuperscript{3},
+Patrick Wincker\textsuperscript{3},
 Ndomassi Tando\textsuperscript{1,2},
 Emmanuel Paradis\textsuperscript{4,5},
 and François Sabot\textsuperscript{1,2*}
 \\
 \bigskip
-\bf{1} DIADE unit, Univ of Montpellier, IRD, Montpellier, France
+\bf{1} DIADE, Univ of Montpellier, IRD, Montpellier, France
 \\
 \bf{2} South Green Bioinformatics Platform, IRD, BIOVERSITY,CIRAD,INRA, Montpellier, France
 \\
@@ -164,47 +165,41 @@ Cleaned reads were then mapped against the Asian reference genome (Os-Nipponbare
 
 \section*{Results}
 \subsection*{Mapping and Normalization}
-After cleaning, the raws reads were mapped against the Asian reference genome (Os-Nipponbare-Reference-IRGSP-1.0 \cite{Mcnally2009, Kawahara2013}). For African rices, we used 163 accessions of the cultivated African rice \textit{O.~glaberrima} and 86 accessions of its wild relative \textit{O.~barthii}, with a mean percentage of mapping of 86.49\% and 86.44\%, respectively \cite{Cubry2018}. For Asian rice, we used 3,000 library representing 450 samples representing rice diversity for the cultivated, with a mean value of xx\% of mapping, and 45 \textit{O. rufipogon} whole genome sequences. From these last samples, 3 of them harboured a very lower level of mapping compared to the other samples (less than 80\% compared to a minimum of 85\%); after careful check, they were removed as being not \textit{O.rufipogon} but \textit{O. meridionalis} and selected by error, ending up with 42 samples. 
-%Reverifier avec les nouvelles données
-%Unproperly and non-mapped reads were then extracted, re-assembled and deduplicated for each species, and the reads were then back mapped to this dispensable-genome data. As a first results, we were able to re-assemble almost 38 Mb per individual (whatever is the species), representing after deduplication 1 Gb and 1.2Gb of non-reference sequences for \textit{O.~glaberrima} and \textit{O.~barthii} (See the\texttt{Table~\ref{statAssembly}} for more details).
-%The new sequence data were then subject to automatic annotation using MAKER-P (!!REF!!), using the same parameters and data used in \cite{Monat2017}. %rajouter la ref GBE - on pourrait essayer de refaire tourner avec les RNAseq d'arcad aussi
+After cleaning, the raws reads were mapped against the Asian reference genome (Os-Nipponbare-Reference-IRGSP-1.0 \cite{Mcnally2009, Kawahara2013}). For African rices, we used 163 accessions of the cultivated African rice \textit{O.~glaberrima} and 86 accessions of its wild relative \textit{O.~barthii}, with a mean percentage of mapping of 86.49\% and 86.44\%, respectively \cite{Cubry2018}. For Asian rice, we used 3,000 library representing 450 samples representing rice diversity for the cultivated, with a mean value of xx\% of mapping, and 45 \textit{O. rufipogon} whole genome sequences. From these last samples, 3 of them harboured a very lower level of mapping compared to the other samples (less than 80\% compared to a minimum of 85\%); after careful check, they were removed as being not \textit{O.rufipogon} but \textit{O. meridionalis} and selected by error, ending up with 42 samples. We then performed reads count normalization according to the initial reads number specific to each individual reported to 1 million and the bin length, obtaining numerical F10KPM data. Distribution of F10PKM density mainly follows a normal law (see \texttt{Fig.\ref{distri}} for an example), thus we successively applied pnorm and FDR statisticals test to define if a given bin was present or not for each individual.
 
-We then performed reads count normalization according to the initial reads number specific to each individual reported to 1 million and the bin length, obtaining numerical F10KPM data. Distribution of F10PKM density mainly follows a normal law (see \texttt{Fig.\ref{distri}}), thus we applied successively pnorm and FDR statisticals test to define if a given bin was present or not for each individual.
+\subsection*{Chromosomal, individual and population effects}
+We checked whether the global FP10KM profile were the same between the different chromosomes, between sequence type (gene, CDS, UTR or TE features) and if there were or not individual(s) effects. We seen that there are no significant differences between the 12 chromosomes on all the four groups analyzed (Supplementary Data S4).
+We then performed the same analysis only on features representing exons (Supplementary Data 4) and representing not exons (\texttt{see Figs.~\ref{SeuilsNE_OG} and \ref{SeuilsNE_OB}}) and confirm profils are the same no matter the type of annotation features we are looking at. As a proxy for the rest of the chromosome we choose the chromosome 10 for the following verifications (central in the little range of chromosomes profiles).
 
-  \subsection*{Chromosomal, individual and population effects}
-  First, using reference sequence annotation data, we checked whether the global profiles were the same between the different chromosomes, no matter if we look to gene, CDS, UTR or TE features and if there were or not individual(s) effects. The first test was to see if the profile were different according to the chromosome we looked at. To obtain those profil we looked for the outliers at differents thresholds. 
-  We seen that there are no significant differences between the 12 chromosomes neither on \emph{O.~glaberrima} nor on \emph{O.~barthii} (\texttt{see Figs.~\ref{SeuilsOG} and \ref{SeuilsOB}}).
-  We then performed the same analysis only on features representing exons (\texttt{see Figs.~\ref{SeuilsExF_OG} and \ref{SeuilsExF_OB}}) and representing not exons (\texttt{see Figs.~\ref{SeuilsNE_OG} and \ref{SeuilsNE_OB}}) and confirm profils are the same no matter the type of annotation features we are looking at. As a proxy for the rest of the chromosome we choose the chromosome 10 for the following verifications (central in the little range of chromosomes profiles).
-  
-  In order to test if there were individual effect, we performed a hundred bootstrap-like analysis choosing 76 individuals.
-  No individual effect were detectable on \emph{O.~glaberrima} (\texttt{see Fig. \ref{BootstrapOG}}) but in \emph{O.~barthii} we found two classes of profils depending on the individuals in the group 
-  (\texttt{see Fig. \ref{BootstrapOB}}).
-  As described by Orjuela et al \cite{Orjuela2014}, this species can be divided in two populations respectively with 23 and 51 individuals distributed as in \texttt{Fig. \ref{SSpopOB}}.
-  To check if the two profiles were due to population split, we tested the hundred bootstrap analysis on \emph{O.~barthii} with only 23 individuals of the first population (\texttt{see Fig. \ref{BootstrapPOP1}}) 
-  and 51 of the second (\texttt{see Fig. \ref{BootstrapPOP2}}).
-  Two profiles were still detectable on the population 1, so we checked if 23 individuals was enough to determine these profiles. We performed the same analysis, only with the population 2 individuals but
-  with bootstrap of 23 individuals. This time the curves show more discrepancy suggesting that 23 is not a sufficient number of individuals to see a robust profile (\texttt{see Fig. \ref{BootstrapPOP2bis}}).
-  To be sure that it is necessary to have a minimum number of individuals to have a strong signal, we performed verifications on \emph{O.~glaberrima}. Both the 23 and 51 verifications conserved the robust profil 
-  (\texttt{see Figs. \ref{BGLAB51} and \ref{BootstrapGLAB23}}).
-  
-  \subsection{Pan-genome compartments}
-  The pan-genome of \emph{O.~glaberrima} is comprised into the core-genome of \emph{O.~barthii} as it represents 39,106 and 39,730 genes respectively (see \texttt{Fig.~\ref{panGSize}}). On the other hand, the dispensable-genome of the cultivated species is bigger than wild one as its represents 5,299 and 745 genes respectively (see \texttt{Fig.~\ref{panGSize}, Table \ref{panG-glab} and Table \ref{panG-bar}}).
-  We identified 5,258 genes (more than 10\% of the repertoire of wild genes) common to the core-genome of \emph{O.~barthii} and to the dispensable-genome of \emph{O.~glaberrima}.  On the other hand we found only 23 genes common to the dispensable-genome of the wild species and the core-genome of the cultivated one. We were not able to detect any individual-specific genes.
-  
-  We looked to the distribution of genes compartment along the chromosomes as presented in \texttt{Fig.~\ref{repartition}}. As expected the profile for the core and the dispensable genes are mirrored. The repartition of genes, no matter to which compartment they belong to, does not seem to follow a particular profile. It seems to be regular along the chromosomes.
-  
-  \subsection{Identification of domestication related ontology/~gene families}
-  We found 10 GO changing of compartment between \emph{O.~barthii} and \emph{O.~glaberrima} (see \texttt{Table~\ref{GOenrichment}}). Six of them switch from the core-genome to the dispensable-genome, and four from the dispensable of \emph{O.~barthii} seem to be totally missing in \emph{O.~glaberrima}.
-  
-  We also found 20 GO for which the process of disappearing seems to start as those GO are totally missing in \emph{O.~glaberrima} but are present in both dispensable and absent part of \emph{O.~barthii} (see \texttt{Fig.~\ref{GOenrichment}}).
-  
-  However as the informations given by the GO enrichment analysis was not clearly identifying something different between the two species, we decided to look at members of some gene families (\texttt{Fig. \ref{GF}}).
-  First of all we confirmed that the whole set of genes of the same family are not 
-  necessarily in the same compartment. Secondly we saw the same trend as we seen with GO, \textit{i.e} from 
-  \emph{O.~barthii} core to \emph{O.~glaberrima} dispensable, from \emph{O.~barthii} dispensable to disapearing in \emph{O.~glaberrima} and from \emph{O.~barthii} missing or in dispensable-genome to complete disapearing in \emph{O.glaberrima}. 
-  In addition we found also a new kind of movement (see \texttt{Fig.~\ref{GFmove}}) which are from \emph{O.~barthii} core to disapearing in \emph{O.~glaberrima} and from the \emph{O.~barthii} dispensable to the 
-  core-genome of \emph{O.glaberrima} (see \texttt{Fig.~\ref{GFdetails}}). 
-  One gene family give us an information about one 'Uk' genes as it was classified as 'Uk' in the cultivated but classified into the core-genome for the other one.
+In order to test if there were individual effect, we performed a hundred bootstrap-like analysis choosing 76 individuals.
+No individual effect were detectable on \emph{O.~glaberrima} (\texttt{see Fig. \ref{BootstrapOG}}) but in \emph{O.~barthii} we found two classes of profils depending on the individuals in the group 
+(\texttt{see Fig. \ref{BootstrapOB}}).
+As described by Orjuela et al \cite{Orjuela2014}, this species can be divided in two populations respectively with 23 and 51 individuals distributed as in \texttt{Fig. \ref{SSpopOB}}.
+To check if the two profiles were due to population split, we tested the hundred bootstrap analysis on \emph{O.~barthii} with only 23 individuals of the first population (\texttt{see Fig. \ref{BootstrapPOP1}}) 
+and 51 of the second (\texttt{see Fig. \ref{BootstrapPOP2}}).
+Two profiles were still detectable on the population 1, so we checked if 23 individuals was enough to determine these profiles. We performed the same analysis, only with the population 2 individuals but
+with bootstrap of 23 individuals. This time the curves show more discrepancy suggesting that 23 is not a sufficient number of individuals to see a robust profile (\texttt{see Fig. \ref{BootstrapPOP2bis}}).
+To be sure that it is necessary to have a minimum number of individuals to have a strong signal, we performed verifications on \emph{O.~glaberrima}. Both the 23 and 51 verifications conserved the robust profil 
+(\texttt{see Figs. \ref{BGLAB51} and \ref{BootstrapGLAB23}}).
+
+\subsection{Pan-genome compartments}
+The pan-genome of \emph{O.~glaberrima} is comprised into the core-genome of \emph{O.~barthii} as it represents 39,106 and 39,730 genes respectively (see \texttt{Fig.~\ref{panGSize}}). On the other hand, the dispensable-genome of the cultivated species is bigger than wild one as its represents 5,299 and 745 genes respectively (see \texttt{Fig.~\ref{panGSize}, Table \ref{panG-glab} and Table \ref{panG-bar}}).
+We identified 5,258 genes (more than 10\% of the repertoire of wild genes) common to the core-genome of \emph{O.~barthii} and to the dispensable-genome of \emph{O.~glaberrima}.  On the other hand we found only 23 genes common to the dispensable-genome of the wild species and the core-genome of the cultivated one. We were not able to detect any individual-specific genes.
+
+We looked to the distribution of genes compartment along the chromosomes as presented in \texttt{Fig.~\ref{repartition}}. As expected the profile for the core and the dispensable genes are mirrored. The repartition of genes, no matter to which compartment they belong to, does not seem to follow a particular profile. It seems to be regular along the chromosomes.
+
+\subsection{Identification of domestication related ontology/~gene families}
+We found 10 GO changing of compartment between \emph{O.~barthii} and \emph{O.~glaberrima} (see \texttt{Table~\ref{GOenrichment}}). Six of them switch from the core-genome to the dispensable-genome, and four from the dispensable of \emph{O.~barthii} seem to be totally missing in \emph{O.~glaberrima}.
+
+We also found 20 GO for which the process of disappearing seems to start as those GO are totally missing in \emph{O.~glaberrima} but are present in both dispensable and absent part of \emph{O.~barthii} (see \texttt{Fig.~\ref{GOenrichment}}).
+
+However as the informations given by the GO enrichment analysis was not clearly identifying something different between the two species, we decided to look at members of some gene families (\texttt{Fig. \ref{GF}}).
+First of all we confirmed that the whole set of genes of the same family are not 
+necessarily in the same compartment. Secondly we saw the same trend as we seen with GO, \textit{i.e} from 
+\emph{O.~barthii} core to \emph{O.~glaberrima} dispensable, from \emph{O.~barthii} dispensable to disapearing in \emph{O.~glaberrima} and from \emph{O.~barthii} missing or in dispensable-genome to complete disapearing in \emph{O.glaberrima}. 
+In addition we found also a new kind of movement (see \texttt{Fig.~\ref{GFmove}}) which are from \emph{O.~barthii} core to disapearing in \emph{O.~glaberrima} and from the \emph{O.~barthii} dispensable to the 
+core-genome of \emph{O.glaberrima} (see \texttt{Fig.~\ref{GFdetails}}). 
+One gene family give us an information about one 'Uk' genes as it was classified as 'Uk' in the cultivated but classified into the core-genome for the other one.
 
 %\clearpage makes sure that all above content is printed at this point and does not invade into the upcoming content
 %\clearpage
@@ -294,7 +289,13 @@ to finally create new diversity inside the new species to give the actual cultiv
 %\clearpage
 
 \section*{Acknowledgments}
-Authors wants to thanks Roland Akakpo for his R script to analyse the GO.
+Authors wants to thanks Bénédicte Rhoné for his R script to analyse the GO.
+FINANCIALS!
+
+
+\section*{Authors contributions}
+KL, SE and PW performed the sequencing and initial QC analyses; CM, ND, CTD, NT, and FS performed the initial bioinformatics treatments; CM and EP developed and implemented the statistical methods; CM, FS and CTD performed analyses on African rices and ND and FS on Asian rices; FS supervized the whole study; FS and CM and wrote the manuscript; all authors read and validate the current version of the manuscript.
+
 
 \nolinenumbers
 
