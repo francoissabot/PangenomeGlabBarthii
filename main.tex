@@ -74,108 +74,102 @@
 % title goes here:
 \begin{flushleft}
 {\Large
-\textbf\newline{Comparison of two African rice species through \\a new pan-genomic approach on massive data}
+\textbf\newline{Domestication lead to a drastic reduction of core-genome in the two lineages of domesticated rices}
 }
 \newline
 % authors go here:
 \\
 Cécile Monat\textsuperscript{1,2{+}\textdagger},
+Nguyet Dang\textsuperscript{1,2\textdagger},
 Christine Tranchant-Dubreuil\textsuperscript{1,2\textdagger},
 Stefan Engelen\textsuperscript{3},
 Karine Labadie\textsuperscript{3},
-Emmanuel Paradis\textsuperscript{4,5},
 Ndomassi Tando\textsuperscript{1,2},
-and François Sabot\textsuperscript{1,2,5*}
+Emmanuel Paradis\textsuperscript{4,5},
+and François Sabot\textsuperscript{1,2*}
 \\
 \bigskip
-\bf{1} DIADE IRD, Univ of Montpellier, Montpellier, France
+\bf{1} DIADE unit, Univ of Montpellier, IRD, Montpellier, France
 \\
-\bf{2} South Green Bioinformatics Platform, BIOVERSITY,CIRAD,INRA,IRD,SUPAGRO, Montpellier, France
+\bf{2} South Green Bioinformatics Platform, IRD, BIOVERSITY,CIRAD,INRA, Montpellier, France
 \\
 \bf{3} CEA, Genoscope, Evry, France
 \\
 \bf{4} ISE-M, Univ of Montpellier, CNRS, IRD, EPHE, Montpellier, France
 \\
-\bf{5} University of Montpellier, Montpellier, France
-\\
 \bigskip
 * Corresponding author: francois.sabot@ird.fr\\
 {+} Present address: Leibniz Institute of Plant Genetics and Crop Plant Research (IPK) Gatersleben, Seeland, Germany\\
-\textdagger Those two authors contribute equally to the work\\
+\textdagger Those three authors contribute equally to the work\\
 \end{flushleft}
 
 \section*{Abstract}
-%Fitting multiple figures into very tight manuscripts while keeping it pleasant to read is challenging. Therefore figures are often simply attached to the very end of a manuscript file. While easier for the authors, this practice is inconvenient for readers. This \LaTeX template shows how to generate a compiled PDF with figures embedded into the text. It provides several examples of how to embed figures or tables directly into the text thus giving you a range of options from which you should choose the one best suited for your manuscript. Check out Schlegel et al., (2016) as example of use \cite{Schlegel2016}.
-Pangenome theory implies that individuals from a given group/species share only a given part of their genome (core-genome), the remaining part being the dispensable one. Domestication process implies a small number of founder individuals, and thus a large core-genome compared to dispensable at the first steps of domestication. We sequenced at high depth 120 cultivated African rice \textit{Oryza glaberrima} and of 74 wild relatives \textit{O. barthii}, and mapped them on the external reference from Asian rice \textit{O. sativa}. We then use a novel DepthOfCoverage approach to identify missing genes. After comparing the two species, we shown that the cultivated species has an unexpectedly smaller core-genome than the wild one, as well as an expected smaller dispensable one. Those findings replace in perspective the inadequacy of cultivated crops to wilderness and their lack of resilience in challenging context.
+% %Fitting multiple figures into very tight manuscripts while keeping it pleasant to read is challenging. Therefore figures are often simply attached to the very end of a manuscript file. While easier for the authors, this practice is inconvenient for readers. This \LaTeX template shows how to generate a compiled PDF with figures embedded into the text. It provides several examples of how to embed figures or tables directly into the text thus giving you a range of options from which you should choose the one best suited for your manuscript. Check out Schlegel et al., (2016) as example of use \cite{Schlegel2016}.
+% Pangenome theory implies that individuals from a given group/species share only a given part of their genome (core-genome), the remaining part being the dispensable one. Domestication process implies a small number of founder individuals, and thus a large core-genome compared to dispensable at the first steps of domestication. We sequenced at high depth 120 cultivated African rice \textit{Oryza glaberrima} and of 74 wild relatives \textit{O. barthii}, and mapped them on the external reference from Asian rice \textit{O. sativa}. We then use a novel DepthOfCoverage approach to identify missing genes. After comparing the two species, we shown that the cultivated species has an unexpectedly smaller core-genome than the wild one, as well as an expected smaller dispensable one. Those findings replace in perspective the inadequacy of cultivated crops to wilderness and their lack of resilience in challenging context.
 % now start line numbers
 \linenumbers
 
 % the * after section prevents numbering
 \section*{Introduction}
-Pan-genome \cite{Tettelin2005} is defined as the whole set of DNA sequence present in a given group such as a species. This pan-genome is further divided in three compartments:(\textit{i}) the core-genome, composed of sequences present in all individuals of the group; (\textit{ii}) the dispensable/variable/accessory-genome, sequences present in some but not all of the individuals; and (\textit{iii}) the individual-specific genome, accounting for sequences present only in a single individual of the group. It has been first defined on microorganism \cite{Tettelin2005} and is now commonly used on bacteria with some specifics tools developed for this type of analysis \cite{Laing2010, Snipen2010, Zhao2012,Sarovich2014, Hennig2015, Thakur2016}. Few studies also started on other genera like animals \cite{Boussaha2015}, Human \cite{Li2010}, viruses \cite{Aherfi2014}, algae \cite{Wang2014a}, fungi \cite{Upadhyaya2015} and plants \cite{Cheung2009, Yao2010, Montenegro2017}.
+Doemstication of rices occured independantly...
+Diversity loss/founder effect/genetic drift....
+However, most previous analyses of domestication impact on diversity were limited to few markers or SNP-based. Recent papers \cite{REFpangenome} shown that the diversity is not only linked to the SNP and short InDels, but also to Presence/Absence Variations (PAV) and Copy Number Variation (CNV). This lead to the idea of Pangenome \cite{Tettelin2005, Tranchant2018}, composed of the core genome, genomic sequences shared between all individuals of the considered group, and of the dispensable genome, genomic sequences shared between some individuals (or even only one) but not all. Currently, only a few studies focused on the pangenome of plants, and only one, to our knowledge \cite{Han2018}....
 
-From this comes the idea that each individual has differences not only in term of alleles but also in term of sequence numbers and composition \cite{Chia2012, Hennig2015, Lu2015}. Moreover two genomes are similar not only by the sequences which they share, but also because they miss the same sequences \cite{Snipen2010}. These type of studies also confirm that having a single reference genome per species is certainly helping but is not enough to represent the whole genomic diversity of a species, as the reference genome has sequences absent in other individual of the same species and miss some other ones \cite{Weigel2009, Gan2011, Upadhyaya2015}. 
-
-%Manque une partie sur les impacts potentiels des diff génomiques, eg la stérilité, les anomalies de recombinaisons, les vigueurs hybrides, tout ca
-Pan-genomic is thus a new way to understand evolution processes (such as sympatric speciation), and to establish new link between individuals (for instance, the link between two sub-species) as well as between different species. 
-
-%Petit texte à ajouter sur la domestication ici
-One interesting aspect is to better characterize and understand the domestication process and its effects on genome, especially on genome diversity and structure.\\
-
-Several studies showed that the analysis of several genomes belonging to the same species allowed to discover more intra-species diversity than expected \cite{Tettelin2008}. Therefore, doing comparative genomics of pan-genomic type put forward the interest to work within the same species to represent a diversity which would not be necessarily visible by looking only at the inter-species level \cite{Lukjancenko2012}. \\
-
-Rice is the most cultivated cereal for human consumption, with two species cultivated, the Asian rice \emph{Oryza~sativa}, worldwide used, and the African rice \emph{Oryza~glaberrima}, endemic to West
-Africa. The latter and its wild relative \emph{Oryza~barthii} are known to have a very low diversity (SNPs based)\cite{Nabholz2014a} compared to other grasses. This characteristic makes them good models to study the genomic diversity in light of pan-genome as with a reasonable number of individuals will cover the entire diversity of the species. For that purpose we resequenced 194 accessions of African rices (120 of the cultivated species and 74 of its wild relative) with Illumina technology and shown huge genic variations during domestication.\\
+In this paper, we benefit of the release of very large scale data on the two domesticated rice species, the Asian rice \textit{Oryza sativa} \cite{3krgp} and the African one \textit{O. glaberrima} \cite{Cubry2018}, and on their respective wild relatives, \textit{O. rufipogon} (this paper) and \textit{O. barthii} \cite{Cubry2018}, to explore the impact of domestication on the core genome of cultivated.
+% Pangenome \cite{Tettelin2005,Tranchant2018} is defined as the whole set of DNA sequence present in a given group (such as a species). This pangenome is further divided in three compartments:(\textit{i}) the core-genome, composed of sequences present in all individuals of the group; (\textit{ii}) the dispensable/variable/accessory-genome, sequences present in some but not all of the individuals; and (\textit{iii}) the individual-specific genome, accounting for sequences present only in a single individual of the group. It has been first defined on microorganism \cite{Tettelin2005} and is now commonly used on bacteria with some specifics tools developed for this type of analysis \cite{Laing2010, Snipen2010, Zhao2012,Sarovich2014, Hennig2015, Thakur2016}. Few studies also started on other genera like animals \cite{Boussaha2015}, Human \cite{Li2010}, viruses \cite{Aherfi2014}, algae \cite{Wang2014a}, fungi \cite{Upadhyaya2015} and plants \cite{Cheung2009, Yao2010, Montenegro2017}.
+% 
+% From this comes the idea that each individual has differences not only in term of alleles but also in term of sequence numbers and composition \cite{Chia2012, Hennig2015, Lu2015}. Moreover two genomes are similar not only by the sequences which they share, but also because they miss the same sequences \cite{Snipen2010}. These type of studies also confirm that having a single reference genome per species is certainly helping but is not enough to represent the whole genomic diversity of a species, as the reference genome has sequences absent in other individual of the same species and miss some other ones \cite{Weigel2009, Gan2011, Upadhyaya2015}. 
+% 
+% %Manque une partie sur les impacts potentiels des diff génomiques, eg la stérilité, les anomalies de recombinaisons, les vigueurs hybrides, tout ca
+% Pan-genomic is thus a new way to understand evolution processes (such as sympatric speciation), and to establish new link between individuals (for instance, the link between two sub-species) as well as between different species. 
+% 
+% %Petit texte à ajouter sur la domestication ici
+% One interesting aspect is to better characterize and understand the domestication process and its effects on genome, especially on genome diversity and structure.\\
+% 
+% Several studies showed that the analysis of several genomes belonging to the same species allowed to discover more intra-species diversity than expected \cite{Tettelin2008}. Therefore, doing comparative genomics of pan-genomic type put forward the interest to work within the same species to represent a diversity which would not be necessarily visible by looking only at the inter-species level \cite{Lukjancenko2012}. \\
+% 
+% Rice is the most cultivated cereal for human consumption, with two species cultivated, the Asian rice \emph{Oryza~sativa}, worldwide used, and the African rice \emph{Oryza~glaberrima}, endemic to West
+% Africa. The latter and its wild relative \emph{Oryza~barthii} are known to have a very low diversity (SNPs based)\cite{Nabholz2014a} compared to other grasses. This characteristic makes them good models to study the genomic diversity in light of pan-genome as with a reasonable number of individuals will cover the entire diversity of the species. For that purpose we resequenced 194 accessions of African rices (120 of the cultivated species and 74 of its wild relative) with Illumina technology and shown huge genic variations during domestication.\\
 
 \section*{Materials and Methods}
 
  \subsection*{Plant material}
-  One hundred and twenty accessions of \emph{Oryza~glaberrima} and 74 accessions of \emph{Oryza~barthii} were used in the study (see \texttt{annexe E}) and described in \cite{Cubry2017}. Plants were grown at IRD greenhouses at Montpellier (France) under normal conditions, and DNA extracted using \textit{QIAGEN} DNAeasy kit (Germany) as recommended by suppliers.
-  Accessions were chosen to span the geographical distribution as well as the phylogenetic tree defined with specific \emph{Oryza~glaberrima} markers \cite{Orjuela2014} (\texttt{Figs.~\ref{MapAfricaWithCountries}, \ref{MapBar} and \ref{MapGlab}}).
+  One hundred and eighty-two accessions of \emph{Oryza~glaberrima} and 82 accessions of \emph{Oryza~barthii} were used in the study (see \texttt{annexe E}) and described in \cite{Cubry2018} (Supplementary Data S1). For Asian rices, we selected 450 samples from the 3,000 Rice Genome Project (3kRGP, \cite{3kRGP}) based on their location on the global diversity and their high-level of data (min 20x, Supplementary Data S1), and obtained 45 \textit{O. rufipogon} sequences in Illumina, high-depth by Genocsope through the IRIGIN project (\url{http://irigin.org}). 
   
   \subsection*{DNA Sequencing}
-  DNA was sequenced at the Genoscope (Evry, France) on Illumina HiSeq 2000/2500/400 with paired-end reads, 100 bases long, and cleaned as described in \cite{Cubry2017, Djedatin2017}. Briefly, the mean sequencing depth is of 35x with a maximum of 52x and a minimum of 21x (for more details see   \texttt{Table~\ref{statCouverture}}), representing a total of 7,749,300,142 and 4,378,115,069 reads for \textit{O. glaberrima} and \textit{O. barthii}, respectively (for more details see \texttt{Table~\ref{statReads}}).
+  DNA was sequenced at the Genoscope (Evry, France) on Illumina HiSeq 2000/2500/400 with paired-end reads, 100 bases long, and cleaned as described in \cite{Cubry2018, Djedatin2017}. Briefly, the mean sequencing depth is of 35x with a maximum of 60x and a minimum of 20x, representing a total of XXXX and XXXX reads for \textit{O. glaberrima} and \textit{O. barthii}, respectively.
 
   \subsection*{Short reads mapping}
-Cleaned reads were then mapped against the Asian reference genome (Os-Nipponbare-Reference-IRGSP-1.0/MSU7.0 \cite{Mcnally2009, Kawahara2013}) through a TOGGLE pipeline \cite{Monat2015, Tranchant2018}, as follows:
-  FASTQC control, repairing step to mate the pairs, mapping with BWA aln/sampe legacy \cite{Li2009} (edit distance of 5 bases), conversion into BAM file with Picardtools (!!REF!!), extraction of properly and unproperly mapped in pair data with SAMtools \cite{Li2009a}. Properly mapped in pair reads were subject to  local realignment using GATK \cite{McKenna2010a}, duplicates removed with Picardtools (for details information about mapping see \texttt{Percentage of mapping versus \textit{Oryza sativa} reference genome for the whole accessions}).
+Cleaned reads were then mapped against the Asian reference genome (Os-Nipponbare-Reference-IRGSP-1.0/MSU7.0 \cite{Mcnally2009, Kawahara2013}) through a dedicated TOGGLe pipeline \cite{Monat2015, Tranchant2018}, as follows:
+  FASTQC control, CutAdapt for removeing low-quality reads, repairing step to mate pairs, mapping with BWA aln/sampe legacy \cite{Li2009} (edit distance of 5 bases), conversion into BAM file with Picardtools (!!REF!!), extraction of properly and unproperly mapped in pair data with SAMtools \cite{Li2009a}. Properly mapped in pair reads were subject to  local realignment using GATK \cite{McKenna2010a}, duplicates removed with Picardtools (for details information about mapping see Supplementary Data S3).
   
-%  \subsection*{Assembly and filtering}
-  %Unproperly mapped in pair reads (\textit{i.e.} without the 0x02 flag in BAM files) were assembled using Abyss \cite{Simpson2009}, under standard conditions. Duplicated assembled contigs were removed with dedupe2 from the BBtools suite \url{http://jgi.doe.gov/data-and-tools/bbtools/} applying a threshold of 80\% of identity. Three methods of deduplications were tested: (\textit{i}) deduplication within all individuals before aggregation and deduplication of the total data; (\textit{ii}) aggregation of the total data then complete deduplication; (\textit{iii}) one-by-one aggregation and deduplication. The three methods provided almost the same results (difference lower than 2\%, data not shown), and we decided to focus on the last method. Individual reads were then re-mapped as detailed above for following analyses.
   
   \subsection*{Reads count and normalization}
   % A revoir comme on lance sur pas mal de données différentes
-  The reads count for each individual on different data sources (annotation line from the Asian rice (\url{http://rice.plantbiology.msu.edu/})) were generated with the multicov tool from BEDTOOLS \cite{Quinlan2014}. Counts were normalized to 1 million total reads according to the initial individual sequencing coverage and to a 1 kb bin length to obtain FPKM values (Features per kilobase of 'genes' per millions of reads).
+  The reads count for each individual on 10kb bin (38,000 for a roughly 380Mb genome) were generated with the multicov tool from BEDTOOLS \cite{Quinlan2014}. Counts were normalized to 1 million total reads according to the initial individual sequencing coverage to obtain FP10KM values (Features per 10 kilobase per millions of reads).
+  
   
   \subsection*{Pnorm and FDR analysis}
   Pnorm analysis and FDR approach at 5\% were performed using R and specific packages pnorm and qvalue \cite{Storey2015}. Annotations or bins for which the normalized reads count mean were lower than 2 were arbitrarily previously ride out the analysis and considered as absent for all individuals. Pan-matrix obtained shown '0' when gene/bin was considered as absent,  '1' if the gene/bin was considered as present and  'Uk' (Unknown) if feature does not pass the initial pnorm test.
   
   \subsection*{GO enrichment analyses}
-  Gene ontology enrichment analyses were performed using a home-made R script and the topGO package \cite{Alexa2016}, with a display of the 5 top most significant GO retrieved using the Fisher classic and weight01 algorithms.
+  Genes underlying the PAV were recovered using the annotation v7 of the MSU7/IRGP1.0 assembly (\url{http://rice.plantbiology.msu.edu/})). Gene ontology enrichment analyses were performed using a home-made R script and the topGO package \cite{Alexa2016}, with a display of the 5 top most significant GO retrieved using the Fisher classic and weight01 algorithms.
   
   \subsection*{Identification of domesticated related gene families}
+  GenFam was used...
   Data from gene families were obtained from Green Phyl V.4  \cite{Conte2008b, Conte2008a, Rouard2011}, selecting sequences without spliced forms.
   
-  \newpage
   \subsection*{Availability of scripts}
-  The whole Perl and R scripts to perform:
-  \begin{itemize}
-   \item normalization ;
-   \item chromosomal, individual and population effects checking ;
-   \item Pnorm and FDR analysis ;
-   \item assignation of compartment ;
-   \item GO and gene families analysis ;
-  \end{itemize}
-  are available on github under Cecill-B/GPLv3 double licenses.
+  The whole bash, Perl and R scripts are available on github under Cecill-B/GPLv3 double licenses on the GitHub of the project: \url{HTTP}
 
 \section*{Results}
 \subsection*{Mapping and Normalization}
-We sequenced 163 accessions of the cultivated African rice \emph{O.~glaberrima} and 86 accessions of its wild relative \emph{O.~barthii} using high depth Illumina technology. After cleaning the raws reads were mapped against the Asian reference genome (Os-Nipponbare-Reference-IRGSP-1.0 \cite{Mcnally2009, Kawahara2013}) as an external reference to avoid biases to any of the two species. The mean percentage of mapping for \emph{O.~glaberrima} is 86.49\% (81.57\% for properly paired reads) and 86.44\% (81.45\%) for \emph{O~barthii}.
+We sequenced 163 accessions of the cultivated African rice \emph{O.~glaberrima} and 86 accessions of its wild relative \emph{O.~barthii} using high depth Illumina technology. After cleaning the raws reads were mapped against the Asian reference genome (Os-Nipponbare-Reference-IRGSP-1.0 \cite{Mcnally2009, Kawahara2013}) as an external reference to avoid biases to any of the two species. The mean percentage of mapping for \emph{O.~glaberrima} is 86.49\% (81.57\% for properly paired reads) and 86.44\% (81.45\%) for \emph{O~barthii}. For Asian rice, we used 3,000 library representing 450 samples representing rice diversity for the cultivated, with a mean value of xx\% of mapping, and 45 \textit{O. rufipogon}. From those last, 3 of them harboured a very lower level of mapping compared to the other samples (minimum of 85\%); after careful check, they were removed as being not \textit{O.rufipogon} but \textit{O. meridionalis} and selected by error, ending up with 42 samples. 
 %Reverifier avec les nouvelles données
 %Unproperly and non-mapped reads were then extracted, re-assembled and deduplicated for each species, and the reads were then back mapped to this dispensable-genome data. As a first results, we were able to re-assemble almost 38 Mb per individual (whatever is the species), representing after deduplication 1 Gb and 1.2Gb of non-reference sequences for \textit{O.~glaberrima} and \textit{O.~barthii} (See the\texttt{Table~\ref{statAssembly}} for more details).
 %The new sequence data were then subject to automatic annotation using MAKER-P (!!REF!!), using the same parameters and data used in \cite{Monat2017}. %rajouter la ref GBE - on pourrait essayer de refaire tourner avec les RNAseq d'arcad aussi
 
-We then performed reads count normalization according to the initial reads number specific to each individual reported to 1 million and the gene/bin length reported to 1kb, obtaining numerical FKPM data. Distribution of FPKM density mainly follows a normal law (see \texttt{Fig.\ref{distri}}), thus we applied successively pnorm and FDR statisticals test to define if a given gene/bin was present or not for each individual.
+We then performed reads count normalization according to the initial reads number specific to each individual reported to 1 million and the bin length, obtaining numerical F10KPM data. Distribution of F10PKM density mainly follows a normal law (see \texttt{Fig.\ref{distri}}), thus we applied successively pnorm and FDR statisticals test to define if a given bin was present or not for each individual.
 
   \subsection*{Chromosomal, individual and population effects}
   First, using reference sequence annotation data, we checked whether the global profiles were the same between the different chromosomes, no matter if we look to gene, CDS, UTR or TE features and if there were or not individual(s) effects. The first test was to see if the profile were different according to the chromosome we looked at. To obtain those profil we looked for the outliers at differents thresholds. 
