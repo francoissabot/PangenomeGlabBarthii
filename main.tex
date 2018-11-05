@@ -74,7 +74,7 @@
 % title goes here:
 \begin{flushleft}
 {\Large
-\textbf\newline{Domestication lead to a drastic reduction of core-genome in the two lineages of domesticated rices}
+\textbf\newline{Domestication lead to a drastic reduction of core-genome in two independent lineages of domesticated rices}
 }
 \newline
 % authors go here:
@@ -135,10 +135,10 @@ In this paper, we benefit of the release of very large scale data on the two dom
 \section*{Materials and Methods}
 
 \subsection*{Plant material}
-One hundred and eighty-two accessions of \emph{Oryza~glaberrima} and 82 accessions of \emph{Oryza~barthii} were used in the study (see \texttt{annexe E}) and described in \cite{Cubry2018} (Supplementary Data S1). For Asian rices, we selected 450 samples from the 3,000 Rice Genome Project (3kRGP, \cite{3kRGP}) based on their location on the global diversity and their high-level of data (min 20x, Supplementary Data S1), and obtained 45 \textit{O. rufipogon} sequences in Illumina, high-depth by Genocsope through the IRIGIN project (\url{http://irigin.org}). 
+One hundred and eighty-two accessions of \textit{Oryza~glaberrima} and 82 accessions of \textit{O.~barthii} were used in the study and described in \cite{Cubry2018} (Supplementary Data S1). For Asian rices, we selected 450 samples from the 3,000 Rice Genome Project (3kRGP, \cite{3kRGP}) based on their location on the global diversity and their high-level of data (min 20x, Supplementary Data S1), and obtained 45 \textit{O. rufipogon} sequences in Illumina, high-depth by Genoscope through the IRIGIN project (\url{http://irigin.org}). 
 
 \subsection*{DNA Sequencing}
-DNA was sequenced at the Genoscope (Evry, France) on Illumina HiSeq 2000/2500/400 with paired-end reads, 100 bases long, and cleaned as described in \cite{Cubry2018, Djedatin2017}. Briefly, the mean sequencing depth is of 35x with a maximum of 60x and a minimum of 20x, representing a total of XXXX and XXXX reads for \textit{O. glaberrima} and \textit{O. barthii}, respectively.
+DNA was sequenced at the Genoscope (Evry, France) on Illumina HiSeq 2000/2500/400 with paired-end reads, 100-150 bases long, and cleaned as described in \cite{Cubry2018, Djedatin2017}. Briefly, the mean sequencing depth is of 35x with a maximum of 60x and a minimum of 20x, representing a total of XXXX and XXXX reads for \textit{O. glaberrima} and \textit{O. barthii}, respectively.
 
 \subsection*{Short reads mapping}
 Cleaned reads were then mapped against the Asian reference genome (Os-Nipponbare-Reference-IRGSP-1.0/MSU7.0 \cite{Mcnally2009, Kawahara2013}) through a dedicated TOGGLe pipeline \cite{Monat2015, Tranchant2018}, as follows:
@@ -175,11 +175,10 @@ We checked whether the global FP10KM profile were the same between the different
 In order to test potential individual effect, we performed a hundred bootstrap-like analysis by resampling randomly 76 individuals for each group. No individual effect were detectable but in \textit{O.~barthii}, where we found two classes of profils depending on the individuals in the group (Supplementary Data S4). As described by Orjuela et al \cite{Orjuela2014}, this species can be divided in two populations respectively with 23 and 51 individuals distributed.
 To check if the two profiles were due to population split, we tested the hundred bootstrap analysis on \textit{O.~barthii} with only 23 individuals of the first population and 51 of the second (Supplementary Data 4).
 Two profiles were still detectable on the population 1, so we checked if 23 individuals were enough with 23 individuals of population 2. This time the curves shown more discrepancy suggesting that 23 individuals is not a sufficient number of individuals to see a robust profile. By testing lower subsampling we were able to determine that 40 individuals is a minimal number to avoid masked population structure effect.
-
 In addition, the subsampling analyses were used to confirm that the difference in number of samples between wild and cultivated will not impact the main results (Supplementary Data 4).
 
 
-\subsection*{Pan-genome compartments}
+\subsection*{Pangenome compartments}
 
 %%%%%%%%%%% Global description, with graphique, GO per group, etc...%%%%%%%%%%%%
 % 
@@ -190,7 +189,7 @@ In addition, the subsampling analyses were used to confirm that the difference i
 
 
 
-\subsection*{Identification of domestication-related effects}
+\subsection*{Identification of domestication-related effects on the pangenome structure}
 %%%%%%%%%%%%%%%La on compare ce qui a disparu/changé d'un groupe à l'autre: perte de gènes, changement de GO...
 
 % 
