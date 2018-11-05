@@ -179,7 +179,7 @@ Two profiles were still detectable on the population 1, so we checked if 23 indi
 In addition, the subsampling analyses were used to confirm that the difference in number of samples between wild and cultivated will not impact the main results (Supplementary Data 4).
 
 
-\subsection{Pan-genome compartments}
+\subsection*{Pan-genome compartments}
 
 %%%%%%%%%%% Global description, with graphique, GO per group, etc...%%%%%%%%%%%%
 % 
@@ -190,7 +190,7 @@ In addition, the subsampling analyses were used to confirm that the difference i
 
 
 
-\subsection{Identification of domestication-related effects}
+\subsection*{Identification of domestication-related effects}
 %%%%%%%%%%%%%%%La on compare ce qui a disparu/changé d'un groupe à l'autre: perte de gènes, changement de GO...
 
 % 
@@ -291,179 +291,179 @@ KL, SE and PW performed the sequencing and initial QC analyses; CM, ND, CTD, NT,
 \nolinenumbers
 
 %Figures
-\begin{figure}
-\centering
- \includegraphics[scale=0.7]{readsDistri.pdf}
- \caption{Reads distribution for one feature on \emph{O.~glaberrima}}
- \label{distri}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[scale=0.7]{panGenomeBothSpecies.pdf}
-\caption{Pan-genome of \emph{O.~glaberrima} and \emph{O.~barthii}}
-\label{panGSize}
-\end{figure}
-
-\begin{table}[]
-\centering
-\footnotesize
-\begin{tabular}{llllllllllllll}
-O. glaberrima                 & Chr1 & Chr2 & Chr3 & Chr4 & Chr5 & Chr6 & Chr7 & Chr8 & Chr9 & Chr10 & Chr11 & Chr12 & Total \\
-Absent                        & 395  & 300  & 218  & 489  & 213  & 448  & 422  & 397  & 277  & 282   & 602   & 502   & 4545  \\
-Core                          & 4099 & 3335 & 3687 & 2634 & 2568 & 2546 & 2379 & 2111 & 1828 & 1749  & 1836  & 1700  & 30472 \\
-Dispensable                   & 641  & 573  & 578  & 391  & 390  & 324  & 334  & 321  & 214  & 316   & 351   & 293   & 4726  \\
-Individu specific             & 0    & 0    & 0    & 0    & 0    & 0    & 0    & 0    & 0    & 0     & 0     & 0     & 0     \\
-Unknown                       & 27   & 15   & 7    & 11   & 12   & 11   & 13   & 18   & 8    & 20    & 32    & 36    & 210   \\
-Total                         & 5162 & 4223 & 4490 & 3525 & 3183 & 3329 & 3148 & 2847 & 2327 & 2367  & 2821  & 2531  & 39953
-\end{tabular}
-\caption{Pan-genome of \emph{O.~glaberrima}. The line first line represents the features we have taken apart because the reads count was not high enough to perform the analysis (mean $\leq$ 2). Absent mean is considered as zero for all the individuals. 
-Core mean is considered as one for all the individuals. Dispensable mean is considered as zero for at least one individual. Individu specific mean is considered as one for only one individual. Unknown mean the p-value was not realisable on 
-the reads count distribution for this particular feature.}
-\label{panG-glab}
-\end{table}
-
-\begin{table}[]
-\centering
-\footnotesize
-\begin{tabular}{llllllllllllll}
-O. barthii                    & Chr1 & Chr2 & Chr3 & Chr4 & Chr5 & Chr6 & Chr7 & Chr8 & Chr9 & Chr10 & Chr11 & Chr12 & Total \\
-Absent                        & 368  & 0    & 193  & 456  & 0    & 414  & 375  & 374  & 267  & 242   & 551   & 454   & 3694  \\
-Core                          & 4793 & 3953 & 4297 & 3068 & 2980 & 2914 & 2773 & 2467 & 2060 & 2125  & 2270  & 2077  & 35777 \\
-Dispensable                   & 1    & 270  & 0    & 0    & 203  & 0    & 0    & 1    & 0    & 0     & 0     & 0     & 475   \\
-Individu specific             & 0    & 0    & 0    & 0    & 0    & 0    & 0    & 0    & 0    & 0     & 0     & 0     & 0     \\
-Unknown                       & 0    & 0    & 0    & 1    & 0    & 1    & 0    & 5    & 0    & 0     & 0     & 0     & 7     \\
-Total                         & 5162 & 4223 & 4490 & 3525 & 3183 & 3329 & 3148 & 2847 & 2327 & 2367  & 2821  & 2531  & 39953
-\end{tabular}
-\caption{Pan-genome of \emph{O.~barthii}. Same legend as Table~\ref{panG-glab}.}
-\label{panG-bar}
-\end{table}
-
-\begin{figure}
-\centering
-\includegraphics[scale=0.35]{Chr5.png}
-\caption{Repartition of gene compartments throughout the chromosome 5}
-\label{repartition}
-\end{figure}
-
-\begin{table}[]
-\centering
-\begin{tabular}{ll}
-from Core to Dispensable    &                                             \\
-GO:0006810     & transport                                   \\
-GO:0051179     & localization                                \\
-GO:0051234     & establishment of localization               \\
-GO:0005215     & transporter activity                        \\
-GO:0001071     & nucleic acid binding transcription factor activity \\
-GO:0003700     & transcription factor activity, sequence-specific DNA binding \\
-               &                                             \\
-from Dispensable to Absent     &                                             \\
-GO:0007165     & signal transduction                         \\
-GO:0050794     & regulation of cellular process              \\
-GO:0051716     & cellular response to stimulus               \\
-GO:0004871     & signal transducer activity                  \\
-               &                                             \\
-from Absent + Dispensable to Absent &                                             \\
-GO:0065007     & biological regulation                       \\
-GO:0044763     & single-organism cellular process            \\
-GO:0006950     & response to stress                          \\
-GO:0044699     & single-organism process                     \\
-GO:0050896     & response to stimulus                        \\
-GO:0008152     & metabolic process                           \\
-GO:0008150     & biological\_process                         \\
-GO:0004872     & receptor activity                           \\
-GO:0060089     & molecular transducer activity               \\
-GO:0019825     & oxygen binding                              \\
-GO:0016787     & hydrolase activity                          \\
-GO:0016301     & kinase activity                             \\
-GO:0016772     & transferase activity, transferring phosphorus-containing groups \\
-GO:0000166     & nucleotide binding                          \\
-GO:0036094     & small molecule binding                      \\
-GO:1901265     & nucleoside phosphate binding                \\
-GO:0005515     & protein binding                             \\
-GO:0016740     & transferase activity                        \\
-GO:0003824     & catalytic activity                          \\
-GO:0003674     & molecular\_function                        
-\end{tabular}
-\caption{List of gene ontology movements from \emph{O.~barthii} to \emph{O.~glaberrima}}
-\label{GOenrichment}
-\end{table}
-
-\begin{table}[]
-\centering
-\small
-\begin{tabular}{lllllllll}
-Green Phyl ID & Green Phyl Name                               & \# of sequences  & \# of sequences  &      &       & \# of sequences found  &      &       \\
-              &                                               & into the family      & found in Wild species&      &       & in Cultivated species      &      &       \\
-              &                                               &                                     & Total                                     & Core & Other & Total                                           & Core & Other \\
-GP000066      & General substrate      & 88                                  & 79                                        & 77   & 2     & 79                                              & 61   & 18    \\
-              & transporter superfamily & & & & & & & \\
-GP000010      & Cytochrome P450                    & 243                                 & 173                                       & 158  & 15    & 173                                             & 136  & 37    \\
-	      & superfamily & & & & & & & \\
-GP000046      & GRAS transcription               & 68                                  & 1                                         & 1    & 0     & 1                                               & 0    & 1     \\
-              & factor family & & & & & & & \\
-GP000008      & Probable NB-ARC                    & 632                                 & 486                                       & 348  & 138   & 486                                             & 266  & 220   \\
-              & superfamily & & & & & & & \\
-GP000028      & MADS transcription               & 83                                  & 4                                         & 4    & 0     & 4                                               & 3    & 1     \\
-              & factor family & & & & & & & \\
-GP000018      & Haem peroxidase                    & 155                                 & 105                                       & 100  & 5     & 105                                             & 83   & 22    \\
-              & superfamily & & & & & & & \\
-GP000047      & Peptidase S10, serine  & 60                                  & 39                                        & 38   & 1     & 39                                              & 31   & 8     \\
-	      & carboxypeptidase family & & & & & & & \\
-GP000118      & AMP-dependent    & 37                                  & 1                                         & 1    & 0     & 1                                               & 1    & 0     \\
-	      & synthetase/ligase superfamily  & & & & & & & \\
-GP000067      & Papain superfamily                            & 71                                  & 1                                         & 1    & 0     & 1                                               & 1    & 0     \\
-	      & & & & & & & & \\
-GP000073      & Cellulose synthase                      & 35                                  & 33                                        & 32   & 1     & 33                                              & 23   & 10    \\
-	      & family & & & & & & &
-\end{tabular}
-\caption{Gene families}
-\label{GF}
-\end{table}
-  
-\begin{table}[]
-\centering
-\small
-\begin{tabular}{llllll}
-Green Phyl ID & Green Phyl Name                               & Wild to Cultivated  &               &                &                    \\
-              &                                               & Core to dispensable & Core to absent & Core to Unknown & Dispensable to core \\
-GP000066      & General substrate transporter superfamily     & 16                 & 0             & 0              & 0                  \\
-GP000010      & Cytochrome P450 superfamily                   & 22                 & 1             & 0              & 1                  \\
-GP000046      & GRAS transcription factor family              & 1                  & 0             & 0              & 0                  \\
-GP000008      & Probable NB-ARC superfamily                   & 91                 & 0             & 1              & 10                 \\
-GP000028      & MADS transcription factor family              & 1                  & 0             & 0              & 0                  \\
-GP000018      & Haem peroxidase superfamily                   & 17                 & 0             & 0              & 0                  \\
-GP000047      & Peptidase S10, serine carboxypeptidase family & 7                  & 0             & 0              & 0                  \\
-GP000118      & AMP-dependent synthetase/ligase superfamily   & 0                  & 0             & 0              & 0                  \\
-GP000067      & Papain superfamily                            & 0                  & 0             & 0              & 0                  \\
-GP000073      & Cellulose synthase family                     & 9                  & 0             & 0              & 0                  \\
-              &                                               & 164                & 1             & 1              & 11                
-\end{tabular}
-\caption{Gene families}
-\label{GFmove}
-\end{table}
-
-\begin{table}[]
-\centering
-\begin{tabular}{lll}
-Gene Name  & Gene product name                                            & Wild to Cultivated  \\
-Os01g36294 & cytochrome P450, putative, expressed                         & Core to Absent      \\
-Os01g33684 & disease resistance RPP13-like protein 1, putative, expressed & Core to Unknown     \\
-Os02g29720 & cytochrome P450, putative, expressed                         & Dispensable to Core \\
-Os07g09940 & NBS-LRR resistance protein, putative, expressed              & Dispensable to Core \\
-Os11g46140 & stripe rust resistance protein Yr10, putative, expressed     & Dispensable to Core \\
-Os11g13430 & RGH1A, putative, expressed                                   & Dispensable to Core \\
-Os11g29030 & disease resistance protein RPM1, putative, expressed         & Dispensable to Core \\
-Os11g44580 & go35 NBS-LRR, putative, expressed                            & Dispensable to Core \\
-Os11g29050 & NBS-LRR type disease resistance protein, putative, expressed & Dispensable to Core \\
-Os11g46130 & stripe rust resistance protein Yr10, putative, expressed     & Dispensable to Core \\
-Os11g46070 & MLA10, putative, expressed                                   & Dispensable to Core \\
-Os11g13440 & RGH1A, putative, expressed                                   & Dispensable to Core \\
-Os02g16330 & xa1, putative, expressed                                     & Dispensable to Core                  
-\end{tabular}
-\caption{Genes belonging to gene family}
-\label{GFdetails}
-\end{table}
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.7]{readsDistri.pdf}
+%  \caption{Reads distribution for one feature on \emph{O.~glaberrima}}
+%  \label{distri}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+% \includegraphics[scale=0.7]{panGenomeBothSpecies.pdf}
+% \caption{Pan-genome of \emph{O.~glaberrima} and \emph{O.~barthii}}
+% \label{panGSize}
+% \end{figure}
+% 
+% \begin{table}[]
+% \centering
+% \footnotesize
+% \begin{tabular}{llllllllllllll}
+% O. glaberrima                 & Chr1 & Chr2 & Chr3 & Chr4 & Chr5 & Chr6 & Chr7 & Chr8 & Chr9 & Chr10 & Chr11 & Chr12 & Total \\
+% Absent                        & 395  & 300  & 218  & 489  & 213  & 448  & 422  & 397  & 277  & 282   & 602   & 502   & 4545  \\
+% Core                          & 4099 & 3335 & 3687 & 2634 & 2568 & 2546 & 2379 & 2111 & 1828 & 1749  & 1836  & 1700  & 30472 \\
+% Dispensable                   & 641  & 573  & 578  & 391  & 390  & 324  & 334  & 321  & 214  & 316   & 351   & 293   & 4726  \\
+% Individu specific             & 0    & 0    & 0    & 0    & 0    & 0    & 0    & 0    & 0    & 0     & 0     & 0     & 0     \\
+% Unknown                       & 27   & 15   & 7    & 11   & 12   & 11   & 13   & 18   & 8    & 20    & 32    & 36    & 210   \\
+% Total                         & 5162 & 4223 & 4490 & 3525 & 3183 & 3329 & 3148 & 2847 & 2327 & 2367  & 2821  & 2531  & 39953
+% \end{tabular}
+% \caption{Pan-genome of \emph{O.~glaberrima}. The line first line represents the features we have taken apart because the reads count was not high enough to perform the analysis (mean $\leq$ 2). Absent mean is considered as zero for all the individuals. 
+% Core mean is considered as one for all the individuals. Dispensable mean is considered as zero for at least one individual. Individu specific mean is considered as one for only one individual. Unknown mean the p-value was not realisable on 
+% the reads count distribution for this particular feature.}
+% \label{panG-glab}
+% \end{table}
+% 
+% \begin{table}[]
+% \centering
+% \footnotesize
+% \begin{tabular}{llllllllllllll}
+% O. barthii                    & Chr1 & Chr2 & Chr3 & Chr4 & Chr5 & Chr6 & Chr7 & Chr8 & Chr9 & Chr10 & Chr11 & Chr12 & Total \\
+% Absent                        & 368  & 0    & 193  & 456  & 0    & 414  & 375  & 374  & 267  & 242   & 551   & 454   & 3694  \\
+% Core                          & 4793 & 3953 & 4297 & 3068 & 2980 & 2914 & 2773 & 2467 & 2060 & 2125  & 2270  & 2077  & 35777 \\
+% Dispensable                   & 1    & 270  & 0    & 0    & 203  & 0    & 0    & 1    & 0    & 0     & 0     & 0     & 475   \\
+% Individu specific             & 0    & 0    & 0    & 0    & 0    & 0    & 0    & 0    & 0    & 0     & 0     & 0     & 0     \\
+% Unknown                       & 0    & 0    & 0    & 1    & 0    & 1    & 0    & 5    & 0    & 0     & 0     & 0     & 7     \\
+% Total                         & 5162 & 4223 & 4490 & 3525 & 3183 & 3329 & 3148 & 2847 & 2327 & 2367  & 2821  & 2531  & 39953
+% \end{tabular}
+% \caption{Pan-genome of \emph{O.~barthii}. Same legend as Table~\ref{panG-glab}.}
+% \label{panG-bar}
+% \end{table}
+% 
+% \begin{figure}
+% \centering
+% \includegraphics[scale=0.35]{Chr5.png}
+% \caption{Repartition of gene compartments throughout the chromosome 5}
+% \label{repartition}
+% \end{figure}
+% 
+% \begin{table}[]
+% \centering
+% \begin{tabular}{ll}
+% from Core to Dispensable    &                                             \\
+% GO:0006810     & transport                                   \\
+% GO:0051179     & localization                                \\
+% GO:0051234     & establishment of localization               \\
+% GO:0005215     & transporter activity                        \\
+% GO:0001071     & nucleic acid binding transcription factor activity \\
+% GO:0003700     & transcription factor activity, sequence-specific DNA binding \\
+%                &                                             \\
+% from Dispensable to Absent     &                                             \\
+% GO:0007165     & signal transduction                         \\
+% GO:0050794     & regulation of cellular process              \\
+% GO:0051716     & cellular response to stimulus               \\
+% GO:0004871     & signal transducer activity                  \\
+%                &                                             \\
+% from Absent + Dispensable to Absent &                                             \\
+% GO:0065007     & biological regulation                       \\
+% GO:0044763     & single-organism cellular process            \\
+% GO:0006950     & response to stress                          \\
+% GO:0044699     & single-organism process                     \\
+% GO:0050896     & response to stimulus                        \\
+% GO:0008152     & metabolic process                           \\
+% GO:0008150     & biological\_process                         \\
+% GO:0004872     & receptor activity                           \\
+% GO:0060089     & molecular transducer activity               \\
+% GO:0019825     & oxygen binding                              \\
+% GO:0016787     & hydrolase activity                          \\
+% GO:0016301     & kinase activity                             \\
+% GO:0016772     & transferase activity, transferring phosphorus-containing groups \\
+% GO:0000166     & nucleotide binding                          \\
+% GO:0036094     & small molecule binding                      \\
+% GO:1901265     & nucleoside phosphate binding                \\
+% GO:0005515     & protein binding                             \\
+% GO:0016740     & transferase activity                        \\
+% GO:0003824     & catalytic activity                          \\
+% GO:0003674     & molecular\_function                        
+% \end{tabular}
+% \caption{List of gene ontology movements from \emph{O.~barthii} to \emph{O.~glaberrima}}
+% \label{GOenrichment}
+% \end{table}
+% 
+% \begin{table}[]
+% \centering
+% \small
+% \begin{tabular}{lllllllll}
+% Green Phyl ID & Green Phyl Name                               & \# of sequences  & \# of sequences  &      &       & \# of sequences found  &      &       \\
+%               &                                               & into the family      & found in Wild species&      &       & in Cultivated species      &      &       \\
+%               &                                               &                                     & Total                                     & Core & Other & Total                                           & Core & Other \\
+% GP000066      & General substrate      & 88                                  & 79                                        & 77   & 2     & 79                                              & 61   & 18    \\
+%               & transporter superfamily & & & & & & & \\
+% GP000010      & Cytochrome P450                    & 243                                 & 173                                       & 158  & 15    & 173                                             & 136  & 37    \\
+% 	      & superfamily & & & & & & & \\
+% GP000046      & GRAS transcription               & 68                                  & 1                                         & 1    & 0     & 1                                               & 0    & 1     \\
+%               & factor family & & & & & & & \\
+% GP000008      & Probable NB-ARC                    & 632                                 & 486                                       & 348  & 138   & 486                                             & 266  & 220   \\
+%               & superfamily & & & & & & & \\
+% GP000028      & MADS transcription               & 83                                  & 4                                         & 4    & 0     & 4                                               & 3    & 1     \\
+%               & factor family & & & & & & & \\
+% GP000018      & Haem peroxidase                    & 155                                 & 105                                       & 100  & 5     & 105                                             & 83   & 22    \\
+%               & superfamily & & & & & & & \\
+% GP000047      & Peptidase S10, serine  & 60                                  & 39                                        & 38   & 1     & 39                                              & 31   & 8     \\
+% 	      & carboxypeptidase family & & & & & & & \\
+% GP000118      & AMP-dependent    & 37                                  & 1                                         & 1    & 0     & 1                                               & 1    & 0     \\
+% 	      & synthetase/ligase superfamily  & & & & & & & \\
+% GP000067      & Papain superfamily                            & 71                                  & 1                                         & 1    & 0     & 1                                               & 1    & 0     \\
+% 	      & & & & & & & & \\
+% GP000073      & Cellulose synthase                      & 35                                  & 33                                        & 32   & 1     & 33                                              & 23   & 10    \\
+% 	      & family & & & & & & &
+% \end{tabular}
+% \caption{Gene families}
+% \label{GF}
+% \end{table}
+%   
+% \begin{table}[]
+% \centering
+% \small
+% \begin{tabular}{llllll}
+% Green Phyl ID & Green Phyl Name                               & Wild to Cultivated  &               &                &                    \\
+%               &                                               & Core to dispensable & Core to absent & Core to Unknown & Dispensable to core \\
+% GP000066      & General substrate transporter superfamily     & 16                 & 0             & 0              & 0                  \\
+% GP000010      & Cytochrome P450 superfamily                   & 22                 & 1             & 0              & 1                  \\
+% GP000046      & GRAS transcription factor family              & 1                  & 0             & 0              & 0                  \\
+% GP000008      & Probable NB-ARC superfamily                   & 91                 & 0             & 1              & 10                 \\
+% GP000028      & MADS transcription factor family              & 1                  & 0             & 0              & 0                  \\
+% GP000018      & Haem peroxidase superfamily                   & 17                 & 0             & 0              & 0                  \\
+% GP000047      & Peptidase S10, serine carboxypeptidase family & 7                  & 0             & 0              & 0                  \\
+% GP000118      & AMP-dependent synthetase/ligase superfamily   & 0                  & 0             & 0              & 0                  \\
+% GP000067      & Papain superfamily                            & 0                  & 0             & 0              & 0                  \\
+% GP000073      & Cellulose synthase family                     & 9                  & 0             & 0              & 0                  \\
+%               &                                               & 164                & 1             & 1              & 11                
+% \end{tabular}
+% \caption{Gene families}
+% \label{GFmove}
+% \end{table}
+% 
+% \begin{table}[]
+% \centering
+% \begin{tabular}{lll}
+% Gene Name  & Gene product name                                            & Wild to Cultivated  \\
+% Os01g36294 & cytochrome P450, putative, expressed                         & Core to Absent      \\
+% Os01g33684 & disease resistance RPP13-like protein 1, putative, expressed & Core to Unknown     \\
+% Os02g29720 & cytochrome P450, putative, expressed                         & Dispensable to Core \\
+% Os07g09940 & NBS-LRR resistance protein, putative, expressed              & Dispensable to Core \\
+% Os11g46140 & stripe rust resistance protein Yr10, putative, expressed     & Dispensable to Core \\
+% Os11g13430 & RGH1A, putative, expressed                                   & Dispensable to Core \\
+% Os11g29030 & disease resistance protein RPM1, putative, expressed         & Dispensable to Core \\
+% Os11g44580 & go35 NBS-LRR, putative, expressed                            & Dispensable to Core \\
+% Os11g29050 & NBS-LRR type disease resistance protein, putative, expressed & Dispensable to Core \\
+% Os11g46130 & stripe rust resistance protein Yr10, putative, expressed     & Dispensable to Core \\
+% Os11g46070 & MLA10, putative, expressed                                   & Dispensable to Core \\
+% Os11g13440 & RGH1A, putative, expressed                                   & Dispensable to Core \\
+% Os02g16330 & xa1, putative, expressed                                     & Dispensable to Core                  
+% \end{tabular}
+% \caption{Genes belonging to gene family}
+% \label{GFdetails}
+% \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -473,177 +473,176 @@ Os02g16330 & xa1, putative, expressed                                     & Disp
 \bibliography{biblioArticlePanG.bib} % refers to example.bib
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\clearpage
-\newpage
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%% SUPPLEMENTAL FIGURES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\beginsupplement}{%
-        \setcounter{table}{0}
-        \renewcommand{\thetable}{S\arabic{table}}%
-        \setcounter{figure}{0}
-        \renewcommand{\thefigure}{S\arabic{figure}}%
-     }
-     
-\beginsupplement
-\begin{table}
-\footnotesize
-      \begin{center}
-	\begin{tabular}{|c|c|c|}
-	  \hline
-	  &  \emph{Oryza glaberrima}  &  \emph{Oryza barthii} \\
-	  \hline
-	  mini coverage  &  21x  &  23x  \\
-	  \hline
-	  maxi coverage  &  52x  &  48x  \\
-	  \hline
-	  mean coverage  &  37x  &  33x  \\
-	  \hline
-	\end{tabular}
-      \end{center}
-    \caption{Sequencing coverage on the \emph{Oryza~glaberrima} and \emph{Oryza~barthii} accessions}
-    \label{statCouverture}
-    \end{table}
-    
-    \begin{table}
-    \footnotesize
-      \begin{center}
-	\begin{tabular}{|c|c|c|}
-	  \hline
-	  &  \emph{Oryza glaberrima}  &  \emph{Oryza barthii} \\
-	  \hline
-	  number of total reads &  7 749 300 142  &  4 378 115 069  \\
-	  \hline
-	  number of mini reads (representing one individual)  &  36 441 796  &  39 940 364  \\
-	  \hline
-	  number of max reads (representing one individual)  &  90 574 623  &  83 618 844  \\
-	  \hline
-	\end{tabular}
-      \end{center}
-    \caption{Number of reads on the \emph{Oryza~glaberrima} and \emph{Oryza~barthii} accessions}
-    \label{statReads}
-    \end{table}
-    
-\begin{figure}
-\centering
- \includegraphics[scale=0.5]{MapAfricaWithCountries.pdf}
- \caption{Geographical distribution of the accessions used in this analysis}
- \label{MapAfricaWithCountries}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.8]{BarthiiWithCountries.pdf}
- \caption{Phylogenetic tree of \emph{Oryza~barthii} accessions. The colors represent the countries just as in \textbf{Fig.~\ref{MapAfricaWithCountries}}. The circles represent the accessions in this analysis.
- Adapted from Orjuela et al \cite{Orjuela2014}.}
- \label{MapBar}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.3]{GlaberrimaWithCountries.pdf}
- \caption{Phylogenetic tree of \emph{Oryza~glaberrima} accessions. The colors represent the countries just as in \textbf{Fig.~\ref{MapAfricaWithCountries}}. The circles represent the accessions in this analysis.
- Adapted from Orjuela et al \cite{Orjuela2014}.}
- \label{MapGlab}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.7]{determinationSeuilsJusqua100MSU7R_Og.png}
- \caption{Percentage of annotation features with at least one outlier among the \emph{O.~glaberrima} species}
- \label{SeuilsOG}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.7]{determinationSeuilsJusqua100MSU7R_Ob.png}
- \caption{Percentage of annotation features with at least one outlier among the \emph{O.~barthii} species}
- \label{SeuilsOB}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.7]{determinationSeuilsJusqua100MSU7R_ExF_Og.png}
- \caption{Percentage of exons features with at least one outlier among the \emph{O.~glaberrima} species}
- \label{SeuilsExF_OG}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.7]{determinationSeuilsJusqua100MSU7R_ExF_Ob.png}
- \caption{Percentage of exons features with at least one outlier among the \emph{O.~barthii} species}
- \label{SeuilsExF_OB}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.7]{determinationSeuilsJusqua100MSU7R_NotEx_Og.png}
- \caption{Percentage of not exons features with at least one outlier among the \emph{O.~glaberrima} species}
- \label{SeuilsNE_OG}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.7]{determinationSeuilsJusqua100MSU7R_NotEx_Ob.png}
- \caption{Percentage of not exons features with at least one outlier among the \emph{O.~barthii} species}
- \label{SeuilsNE_OB}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.7]{determinationSeuilBootstrapGlabExF.png}
- \caption{Hundred bootstrap of 76 individuals from 120 accessions of \emph{O.~glaberrima}}
- \label{BootstrapOG}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.7]{determinationSeuilsBootstrapBarExF.png}
- \caption{Hundred bootstrap of 76 individuals from 76 accessions of \emph{O.~barthii}}
- \label{BootstrapOB}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.7]{arbreBarthiiAvecRef_souspops.pdf}
- \caption{Phylogenetic tree of \emph{O.~barthii} with the population 1 accessions on cyan and the population 2 accessions on navy blue. Adapted from Orjuela et al \cite{Orjuela2014}}
- \label{SSpopOB}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.7]{determinationSeuilsBootstrapBarExF_pop1.png}
- \caption{Hundred bootstrap of 23 individuals from 23 accessions of population 1 of \emph{O.~barthii}}
- \label{BootstrapPOP1}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.7]{determinationSeuilsBootstrapBarExF_pop2.png}
- \caption{Hundred bootstrap of 51 individuals from 51 accessions of population 2 of \emph{O.~barthii}}
- \label{BootstrapPOP2}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.7]{determinationSeuilsBootstrapBarExF_pop2_ech23.png}
- \caption{Hundred bootstrap of 23 individuals from 51 accessions of population 2 of \emph{O.~barthii}}
- \label{BootstrapPOP2bis}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.7]{determinationSeuilBootstrapGlabExF_verif51.png}
- \caption{Hundred bootstrap of 51 individuals from 120 accessions of \emph{O.~glaberrima}}
- \label{BGLAB51}
-\end{figure}
-
-\begin{figure}
-\centering
- \includegraphics[scale=0.7]{determinationSeuilBootstrapGlabExF_verif23.png}
- \caption{Hundred bootstrap of 23 individuals from 120 accessions of \emph{O.~glaberrima}}
- \label{BootstrapGLAB23}
-\end{figure}
+% \newcommand{\beginsupplement}{%
+%         \setcounter{table}{0}
+%         \renewcommand{\thetable}{S\arabic{table}}%
+%         \setcounter{figure}{0}
+%         \renewcommand{\thefigure}{S\arabic{figure}}%
+%      }
+%      
+% \beginsupplement
+% \begin{table}
+% \footnotesize
+%       \begin{center}
+% 	\begin{tabular}{|c|c|c|}
+% 	  \hline
+% 	  &  \emph{Oryza glaberrima}  &  \emph{Oryza barthii} \\
+% 	  \hline
+% 	  mini coverage  &  21x  &  23x  \\
+% 	  \hline
+% 	  maxi coverage  &  52x  &  48x  \\
+% 	  \hline
+% 	  mean coverage  &  37x  &  33x  \\
+% 	  \hline
+% 	\end{tabular}
+%       \end{center}
+%     \caption{Sequencing coverage on the \emph{Oryza~glaberrima} and \emph{Oryza~barthii} accessions}
+%     \label{statCouverture}
+%     \end{table}
+%     
+%     \begin{table}
+%     \footnotesize
+%       \begin{center}
+% 	\begin{tabular}{|c|c|c|}
+% 	  \hline
+% 	  &  \emph{Oryza glaberrima}  &  \emph{Oryza barthii} \\
+% 	  \hline
+% 	  number of total reads &  7 749 300 142  &  4 378 115 069  \\
+% 	  \hline
+% 	  number of mini reads (representing one individual)  &  36 441 796  &  39 940 364  \\
+% 	  \hline
+% 	  number of max reads (representing one individual)  &  90 574 623  &  83 618 844  \\
+% 	  \hline
+% 	\end{tabular}
+%       \end{center}
+%     \caption{Number of reads on the \emph{Oryza~glaberrima} and \emph{Oryza~barthii} accessions}
+%     \label{statReads}
+%     \end{table}
+%     
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.5]{MapAfricaWithCountries.pdf}
+%  \caption{Geographical distribution of the accessions used in this analysis}
+%  \label{MapAfricaWithCountries}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.8]{BarthiiWithCountries.pdf}
+%  \caption{Phylogenetic tree of \emph{Oryza~barthii} accessions. The colors represent the countries just as in \textbf{Fig.~\ref{MapAfricaWithCountries}}. The circles represent the accessions in this analysis.
+%  Adapted from Orjuela et al \cite{Orjuela2014}.}
+%  \label{MapBar}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.3]{GlaberrimaWithCountries.pdf}
+%  \caption{Phylogenetic tree of \emph{Oryza~glaberrima} accessions. The colors represent the countries just as in \textbf{Fig.~\ref{MapAfricaWithCountries}}. The circles represent the accessions in this analysis.
+%  Adapted from Orjuela et al \cite{Orjuela2014}.}
+%  \label{MapGlab}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.7]{determinationSeuilsJusqua100MSU7R_Og.png}
+%  \caption{Percentage of annotation features with at least one outlier among the \emph{O.~glaberrima} species}
+%  \label{SeuilsOG}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.7]{determinationSeuilsJusqua100MSU7R_Ob.png}
+%  \caption{Percentage of annotation features with at least one outlier among the \emph{O.~barthii} species}
+%  \label{SeuilsOB}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.7]{determinationSeuilsJusqua100MSU7R_ExF_Og.png}
+%  \caption{Percentage of exons features with at least one outlier among the \emph{O.~glaberrima} species}
+%  \label{SeuilsExF_OG}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.7]{determinationSeuilsJusqua100MSU7R_ExF_Ob.png}
+%  \caption{Percentage of exons features with at least one outlier among the \emph{O.~barthii} species}
+%  \label{SeuilsExF_OB}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.7]{determinationSeuilsJusqua100MSU7R_NotEx_Og.png}
+%  \caption{Percentage of not exons features with at least one outlier among the \emph{O.~glaberrima} species}
+%  \label{SeuilsNE_OG}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.7]{determinationSeuilsJusqua100MSU7R_NotEx_Ob.png}
+%  \caption{Percentage of not exons features with at least one outlier among the \emph{O.~barthii} species}
+%  \label{SeuilsNE_OB}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.7]{determinationSeuilBootstrapGlabExF.png}
+%  \caption{Hundred bootstrap of 76 individuals from 120 accessions of \emph{O.~glaberrima}}
+%  \label{BootstrapOG}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.7]{determinationSeuilsBootstrapBarExF.png}
+%  \caption{Hundred bootstrap of 76 individuals from 76 accessions of \emph{O.~barthii}}
+%  \label{BootstrapOB}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.7]{arbreBarthiiAvecRef_souspops.pdf}
+%  \caption{Phylogenetic tree of \emph{O.~barthii} with the population 1 accessions on cyan and the population 2 accessions on navy blue. Adapted from Orjuela et al \cite{Orjuela2014}}
+%  \label{SSpopOB}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.7]{determinationSeuilsBootstrapBarExF_pop1.png}
+%  \caption{Hundred bootstrap of 23 individuals from 23 accessions of population 1 of \emph{O.~barthii}}
+%  \label{BootstrapPOP1}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.7]{determinationSeuilsBootstrapBarExF_pop2.png}
+%  \caption{Hundred bootstrap of 51 individuals from 51 accessions of population 2 of \emph{O.~barthii}}
+%  \label{BootstrapPOP2}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.7]{determinationSeuilsBootstrapBarExF_pop2_ech23.png}
+%  \caption{Hundred bootstrap of 23 individuals from 51 accessions of population 2 of \emph{O.~barthii}}
+%  \label{BootstrapPOP2bis}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.7]{determinationSeuilBootstrapGlabExF_verif51.png}
+%  \caption{Hundred bootstrap of 51 individuals from 120 accessions of \emph{O.~glaberrima}}
+%  \label{BGLAB51}
+% \end{figure}
+% 
+% \begin{figure}
+% \centering
+%  \includegraphics[scale=0.7]{determinationSeuilBootstrapGlabExF_verif23.png}
+%  \caption{Hundred bootstrap of 23 individuals from 120 accessions of \emph{O.~glaberrima}}
+%  \label{BootstrapGLAB23}
+% \end{figure}
 
 \end{document}
 
