@@ -181,7 +181,13 @@ In addition, the subsampling analyses were used to confirm that the difference i
 \subsection*{Pangenome compartments}
 
 %%%%%%%%%%% Global description, with graphique, GO per group, etc...%%%%%%%%%%%%
-% 
+
+%Image: circos global en un panel, table globale de résultats
+
+%Description des différents compartiments, mais aussi croisements: gènes/locus délétés en commun SNP density
+%Reste à comparer (refaire analyse sur mapping glab/bart sur MSU7, voir avec Christine si elle le fait ou si je le lance), à regarder les positionnnements des variations, gene vs non gene... Aussi regarder les SNP sur genes en focntion des compartiments 
+
+
 % The pan-genome of \emph{O.~glaberrima} is comprised into the core-genome of \emph{O.~barthii} as it represents 39,106 and 39,730 genes respectively (see \texttt{Fig.~\ref{panGSize}}). On the other hand, the dispensable-genome of the cultivated species is bigger than wild one as its represents 5,299 and 745 genes respectively (see \texttt{Fig.~\ref{panGSize}, Table \ref{panG-glab} and Table \ref{panG-bar}}).
 % We identified 5,258 genes (more than 10\% of the repertoire of wild genes) common to the core-genome of \emph{O.~barthii} and to the dispensable-genome of \emph{O.~glaberrima}.  On the other hand we found only 23 genes common to the dispensable-genome of the wild species and the core-genome of the cultivated one. We were not able to detect any individual-specific genes.
 % 
@@ -191,6 +197,9 @@ In addition, the subsampling analyses were used to confirm that the difference i
 
 \subsection*{Identification of domestication-related effects on the pangenome structure}
 %%%%%%%%%%%%%%%La on compare ce qui a disparu/changé d'un groupe à l'autre: perte de gènes, changement de GO...
+%Et on compare entre les deux domestications!
+
+%images: comparaison des deux états sauvages cultivés, GOmap ?
 
 % 
 % We found 10 GO changing of compartment between \emph{O.~barthii} and \emph{O.~glaberrima} (see \texttt{Table~\ref{GOenrichment}}). Six of them switch from the core-genome to the dispensable-genome, and four from the dispensable of \emph{O.~barthii} seem to be totally missing in \emph{O.~glaberrima}.
@@ -209,6 +218,9 @@ In addition, the subsampling analyses were used to confirm that the difference i
 %\clearpage
 
 \section*{Discussion}
+
+%On fait plus simple, mais mieux imagé
+
 % Pan-genomes studies allow to have a new point of view about diversity of a species as well as to have new insights on comparative genomic between two or more species. Pan-genome classes genes into three compartments
 % according to the number of individuals which carry it in the sample studied. Core genes are often related to essential functions like development, dispensable genes to environmental adaptation and biotic stress. Those 
 % genes were presented to be really important into the diversification process. 
@@ -231,18 +243,6 @@ In addition, the subsampling analyses were used to confirm that the difference i
 % \item The level of comparison between the studied individuals (based for example on the sequence similarity or on presence/ absence profile of each gene independent the sequence similarity).
 % \end{enumerate}
 % Pan-genomic analysis allows to determine the genomic diversity of a dataset, but also to predict how many extra genomes have to be add to characterize the whole pan-genome. For instance, extrapolation would be robust only if a high number of genomes is taken into account \cite{Vernikos2015}.\\
-% 
-% Vernikos et al \cite{Vernikos2015} have inventoried 8 different methods dedicated to pan-genomic analyses:
-% \begin{itemize}
-% \item ORFsim: ORF alignment similarity;
-% \item OG: method based on cluster of orthologs;
-% \item Comb: combinatorial approach with successive addition of genomes;
-% \item Gene freq: frequency of gene presence/ absence;
-% \item Ref: generation of a reference pan-genome using a subset of individual;
-% \item FSM: finite supragenome model;
-% \item BMM: binomial mixture model;
-% \item IMGM: infinitely many genes model.\\
-% \end{itemize}
 % 
 % Most of these methodologies were developed for bacterial or microorganism species, which are much more smaller and less complex than plants genomes (no polyploid, not so much of transposable elements for example). Those methodologies are also mostly based on cluster of orthologs, and get them on plant genome is a long process and we wanted something quicker. The tools developed for pan-genomic analysis are also mostly individual-centered. It means, we look to the difference of coverage between many loci inside one individual, and do it again on another one. It is good working, but, we thing that we should consider population. The final purpose of pan-genomic analysis is to do comparative analysis, so making it taking in account the population, was for us, a better way of doing a pan-genomic study.  That is the reason why we developed a new method based neither on individual but on loci. With this method, we compare the difference of covering between individual for the same locus. Because the mapping coverage is different depending on the accessions, we beforehand have normalized the data. We can then look for outlier and so defined individual for which the gene is then considered to be absent. 
 % 
