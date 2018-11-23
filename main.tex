@@ -135,14 +135,13 @@ In this paper, we benefit of the release of very large scale data on the two dom
 \section*{Materials and Methods}
 
 \subsection*{Plant material}
-One hundred and eighty-two accessions of \textit{Oryza~glaberrima} and 82 accessions of \textit{O.~barthii} were used in the study and described in \cite{Cubry2018} (Supplementary Data S1). For Asian rices, we selected 450 samples from the 3,000 Rice Genome Project (3kRGP, \cite{3kRGP}) based on their location on the global diversity and their high-level of data (min 20x, Supplementary Data S1), and obtained 45 \textit{O. rufipogon} sequences in Illumina, high-depth by Genoscope through the IRIGIN project (\url{http://irigin.org}). 
+One hundred and sixty-three accessions of \textit{Oryza glaberrima} and 83 accessions of \textit{O. barthii} were obtained from Genoscope and described in \cite{Cubry2018} (Supplementary Data S1). For Asian rices, we selected 450 samples from the 3,000 Rice Genome Project (3kRGP, \cite{3kRGP}) based on their location on the global diversity and their high-level of data (min 20x, Supplementary Data S1), and obtained 45 \textit{O. rufipogon} sequences in Illumina, high-depth from Genoscope through the IRIGIN project (\url{http://irigin.org}). 
 
-\subsection*{DNA Sequencing}
-DNA was sequenced at the Genoscope (Evry, France) on Illumina HiSeq 2000/2500/400 with paired-end reads, 100-150 bases long, and cleaned as described in \cite{Cubry2018, Djedatin2017}. Briefly, the mean sequencing depth is of 35x with a maximum of 60x and a minimum of 20x, representing a total of XXXX and XXXX reads for \textit{O. glaberrima} and \textit{O. barthii}, respectively.
+\subsection*{DNA Sequencing for \textit{O. rufipogon}}
+DNA was sequenced at the Genoscope (Evry, France) on Illumina HiSeq 2000/2500/400 with paired-end reads, 100-150 bases long, and cleaned as described in \cite{Cubry2018, Djedatin2017}. Briefly, the mean sequencing depth is of 35x with a maximum of 60x, representing a total of XXXX,XXXX and XXXX reads and YYYYY bases. The data were cleaned as described in \cite{Cubry2018, Djedatin2017}.
 
 \subsection*{Short reads mapping}
-Cleaned reads were then mapped against the Asian reference genome (Os-Nipponbare-Reference-IRGSP-1.0/MSU7.0 \cite{Mcnally2009, Kawahara2013}) through a dedicated TOGGLe pipeline \cite{Monat2015, Tranchant2018}, as follows:
-FASTQC control, CutAdapt for removeing low-quality reads, repairing step to mate pairs, mapping with BWA aln/sampe legacy \cite{Li2009} (edit distance of 5 bases), conversion into BAM file with Picardtools (!!REF!!), extraction of properly and unproperly mapped in pair data with SAMtools \cite{Li2009a}. Properly mapped in pair reads were subject to  local realignment using GATK \cite{McKenna2010a}, duplicates removed with Picardtools (for details information about mapping see Supplementary Data S3).
+Cleaned reads were then mapped against the Asian reference genome (Os-Nipponbare-Reference-IRGSP-1.0/MSU7.0 \cite{Mcnally2009, Kawahara2013}) through a dedicated TOGGLe pipeline \cite{Monat2015, Tranchant2018}, as follows: mapping with BWA aln/sampe legacy \cite{Li2009} (edit distance of 5 bases, insert size of 500 bases), conversion into BAM file and sorting by coordinates with PicardTools (!!REF!!) (for details information about mapping see Supplementary Data S3).
 
 
 \subsection*{Reads count and normalization}
@@ -153,45 +152,47 @@ The reads count for each individual on 10kb bin (38,000 for a roughly 380Mb geno
 All subsamplings and bootstrapping to were performed from the read count table, with random choice, using truely random selection scripts. 
 
 \subsection*{Pnorm and FDR analysis}
-Pnorm analysis and FDR approach at 5\% were performed using R and specific packages pnorm and qvalue \cite{Storey2015}. Annotations or bins for which the normalized reads count mean were lower than 2 were arbitrarily previously ride out the analysis and considered as absent for all individuals. Pan-matrix obtained shown '0' when gene/bin was considered as absent,  '1' if the gene/bin was considered as present and  'Uk' (Unknown) if feature does not pass the initial pnorm test.
+Pnorm analysis and FDR approach at 5\% were performed using R and specific packages pnorm and qvalue \cite{Storey2015} (VERSION). Bins for which the FP10KM mean were lower than 2 were arbitrarily previously ride out the analysis and considered as absent for all individuals. Pan-matrix obtained shown '0' when bin was considered as absent,  '1' if the bin was considered as present and  'Uk' (Unknown) if feature does not pass the initial pnorm test.
 
 \subsection*{GO enrichment analyses}
-Genes underlying the PAV were recovered using the annotation v7 of the MSU7/IRGP1.0 assembly (\url{http://rice.plantbiology.msu.edu/})). Gene ontology enrichment analyses were performed using a home-made R script and the topGO package \cite{Alexa2016}, with a display of the 5 top most significant GO retrieved using the Fisher classic and weight01 algorithms.
+Genes underlying the PAV were recovered using the MSUv7 annotation of the IRGSP1.0 assembly (\url{http://rice.plantbiology.msu.edu/})). Gene ontology enrichment analyses were performed using a home-made R script and the topGO package \cite{Alexa2016}, with a display of the 5 top most significant GO retrieved using the Fisher classic and weight01 algorithms.
 
 \subsection*{Identification of domesticated related gene families}
 GenFam was used...
 Data from gene families were obtained from Green Phyl V.4 \cite{Conte2008b, Conte2008a, Rouard2011}, selecting sequences without spliced forms.
 
 \subsection*{Availability of scripts}
-The whole bash, Perl and R scripts are available on github under Cecill-B/GPLv3 double licenses on the GitHub of the project: \url{HTTP}
+The whole bash, Perl and R scripts are available on GitHub under Cecill-B/GPLv3 double licenses on the GitHub of the project: \url{HTTP}
 
 \section*{Results}
 \subsection*{Mapping and Normalization}
-After cleaning, the raws reads were mapped against the Asian reference genome (Os-Nipponbare-Reference-IRGSP-1.0 \cite{Mcnally2009, Kawahara2013}). For African rices, we used 163 accessions of the cultivated African rice \textit{O.~glaberrima} and 86 accessions of its wild relative \textit{O.~barthii}, with a mean percentage of mapping of 86.49\% and 86.44\%, respectively \cite{Cubry2018}. For Asian rice, we used 3,000 library representing 450 samples representing rice diversity for the cultivated, with a mean value of xx\% of mapping, and 45 \textit{O. rufipogon} whole genome sequences. From these last samples, 3 of them harboured a very lower level of mapping compared to the other samples (less than 80\% compared to a minimum of 85\%); after careful check, they were removed as being not \textit{O.rufipogon} but \textit{O. meridionalis} and selected by error, ending up with 42 samples. We then performed reads count normalization according to the initial reads number specific to each individual reported to 1 million and the bin length, obtaining numerical F10KPM data. Distribution of F10PKM density mainly follows a normal law (see \texttt{Fig.\ref{distri}} for an example), thus we successively applied pnorm and FDR statisticals test to define if a given bin was present or not for each individual.
+After cleaning, the raws reads were mapped against the Asian reference genome (Os-Nipponbare-Reference-IRGSP-1.0 \cite{Mcnally2009, Kawahara2013}). For African rices, we used 163 accessions of the cultivated African rice \textit{O. glaberrima} and 83 accessions of its wild relative \textit{O. barthii}, with a mean percentage of mapping of 86.49\% and 86.44\%, respectively \cite{Cubry2018}. For Asian rice, we used 3,000 library representing 450 samples representing rice diversity for the cultivated, with a mean value of xx\% of mapping, and 45 \textit{O. rufipogon} whole genome sequences. From these last samples, 3 of them harboured a very lower level of mapping compared to the other samples (less than 80\% compared to a minimum of 85\%); after careful check, they were removed as being not \textit{O.rufipogon} but \textit{O. meridionalis} and selected by error, ending up with 42 samples. We then performed reads count normalization according to the initial reads number specific to each individual reported to 1 million and the bin length, obtaining numerical F10KPM data. Distribution of F10PKM density mainly follows a normal law (see \texttt{Fig.\ref{distri}} for an example), thus we successively applied pnorm and FDR statisticals test to define if a given bin was present or not for each individual.
 
 \subsection*{Chromosomal, individual and population effects}
 We checked whether the global FP10KM profile were the same between the different chromosomes, between sequence type (gene, CDS, UTR or TE features) and if there were or not individual(s) effects. We seen that there are no significant differences between the 12 chromosomes on all the four groups analyzed (Supplementary Data S4).We then performed the same analysis only on exons and none exons  (Supplementary Data 4), and confirmed that profils are the same no matter the type of features we were looking at. As a proxy for the rest of the chromosome, we choosed the chromosome 10 for the next validations.
 
-In order to test potential individual effect, we performed a hundred bootstrap-like analysis by resampling randomly 76 individuals for each group. No individual effect were detectable but in \textit{O.~barthii}, where we found two classes of profils depending on the individuals in the group (Supplementary Data S4). As described by Orjuela et al \cite{Orjuela2014}, this species can be divided in two populations respectively with 23 and 51 individuals distributed.
-To check if the two profiles were due to population split, we tested the hundred bootstrap analysis on \textit{O.~barthii} with only 23 individuals of the first population and 51 of the second (Supplementary Data 4).
+In order to test potential individual effect, we performed a hundred bootstrap-like analysis by resampling randomly 76 individuals for each group. No individual effect were detectable but in \textit{O. barthii}, where we found two classes of profils depending on the individuals in the group (Supplementary Data S4). As described in Orjuela et al \cite{Orjuela2014}, this species can be divided in two populations respectively with 23 and 51 individuals distributed.
+To check if the two profiles were due to population split, we tested the hundred bootstrap analysis on \textit{O. barthii} with only 23 individuals of the first population and 51 of the second (Supplementary Data 4).
 Two profiles were still detectable on the population 1, so we checked if 23 individuals were enough with 23 individuals of population 2. This time the curves shown more discrepancy suggesting that 23 individuals is not a sufficient number of individuals to see a robust profile. By testing lower subsampling we were able to determine that 40 individuals is a minimal number to avoid masked population structure effect.
 In addition, the subsampling analyses were used to confirm that the difference in number of samples between wild and cultivated will not impact the main results (Supplementary Data 4).
 
 
-\subsection*{Pangenome compartments}
+\subsection*{Core-genome vs partial dispensable}
 
 %%%%%%%%%%% Global description, with graphique, GO per group, etc...%%%%%%%%%%%%
 
 %Image: circos global en un panel, table globale de résultats
 
-%Description des différents compartiments, mais aussi croisements: gènes/locus délétés en commun SNP density
-%Reste à comparer (refaire analyse sur mapping glab/bart sur MSU7, voir avec Christine si elle le fait ou si je le lance), à regarder les positionnnements des variations, gene vs non gene... Aussi regarder les SNP sur genes en focntion des compartiments 
+%Description des différents compartiments, mais aussi croisements: gènes/locus délétés en commun par niveau, SNP density
+%Reste à comparer (refaire analyse sur mapping glab/bart sur MSU7, voir avec Christine si elle le fait ou si je le lance), à regarder les positionnnements des variations, gene vs non gene... Aussi regarder les SNP sur genes en fonction des compartiments 
 
 
 % The pan-genome of \emph{O.~glaberrima} is comprised into the core-genome of \emph{O.~barthii} as it represents 39,106 and 39,730 genes respectively (see \texttt{Fig.~\ref{panGSize}}). On the other hand, the dispensable-genome of the cultivated species is bigger than wild one as its represents 5,299 and 745 genes respectively (see \texttt{Fig.~\ref{panGSize}, Table \ref{panG-glab} and Table \ref{panG-bar}}).
 % We identified 5,258 genes (more than 10\% of the repertoire of wild genes) common to the core-genome of \emph{O.~barthii} and to the dispensable-genome of \emph{O.~glaberrima}.  On the other hand we found only 23 genes common to the dispensable-genome of the wild species and the core-genome of the cultivated one. We were not able to detect any individual-specific genes.
 % 
 % We looked to the distribution of genes compartment along the chromosomes as presented in \texttt{Fig.~\ref{repartition}}. As expected the profile for the core and the dispensable genes are mirrored. The repartition of genes, no matter to which compartment they belong to, does not seem to follow a particular profile. It seems to be regular along the chromosomes.
+
+
 
 
 
@@ -284,7 +285,7 @@ FINANCIALS!
 
 
 \section*{Authors contributions}
-KL, SE and PW performed the sequencing and initial QC analyses; CM, ND, CTD, NT, and FS performed the initial bioinformatics treatments; CM, FS and EP developed and implemented the statistical methods; CM, FS and CTD performed analyses on African rices and ND and FS on Asian rices; FS supervized the whole study; FS and CM and wrote the manuscript; all authors read and validate the current version of the manuscript.
+FS supervized the whole study; KL, SE and PW performed the sequencing and initial QC analyses; CM, ND, CTD, NT, and FS performed the initial bioinformatics treatments; CM, FS and EP developed and implemented the statistical methods; CM, FS and CTD performed analyses on African rices and ND and FS on Asian rices; FS and CM wrote the manuscript; all authors read and validate the current version of the manuscript.
 
 
 \nolinenumbers
