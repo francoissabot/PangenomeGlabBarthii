@@ -142,7 +142,7 @@ DNA was sequenced at the Genoscope (Evry, France) on Illumina HiSeq 2000/2500/40
 
 \subsection*{Short reads mapping}
 Cleaned reads were then mapped against the Asian reference genome (Os-Nipponbare-Reference-IRGSP-1.0/MSU7.0 \cite{Mcnally2009, Kawahara2013}) through a dedicated TOGGLe pipeline \cite{Monat2015, Tranchant2018}, as follows:
-FASTQC control, CutAdapt for removeing low-quality reads, repairing step to mate pairs, mapping with BWA aln/sampe legacy \cite{Li2009} (edit distance of 5 bases), conversion into BAM file with Picardtools (!!REF!!), extraction of properly and unproperly mapped in pair data with SAMtools \cite{Li2009a}. Properly mapped in pair reads were subject to  local realignment using GATK \cite{McKenna2010a}, duplicates removed with Picardtools (for details information about mapping see Supplementary Data S3).
+FASTQC control, CutAdapt for removing low-quality reads, repairing step to mate pairs, mapping with BWA aln/sampe legacy \cite{Li2009} (edit distance of 5 bases), conversion into BAM file with Picardtools (!!REF!!), extraction of properly and unproperly mapped in pair data with SAMtools \cite{Li2009a}. Properly mapped in pair reads were subject to  local realignment using GATK \cite{McKenna2010a}, duplicates removed with Picardtools (for details information about mapping see Supplementary Data S3).
 
 
 \subsection*{Reads count and normalization}
@@ -158,9 +158,12 @@ Pnorm analysis and FDR approach at 5\% were performed using R and specific packa
 \subsection*{GO enrichment analyses}
 Genes underlying the PAV were recovered using the annotation v7 of the MSU7/IRGP1.0 assembly (\url{http://rice.plantbiology.msu.edu/})). Gene ontology enrichment analyses were performed using a home-made R script and the topGO package \cite{Alexa2016}, with a display of the 5 top most significant GO retrieved using the Fisher classic and weight01 algorithms.
 
-\subsection*{Identification of domesticated related gene families}
+\subsection*{Gene families}
 GenFam was used...
 Data from gene families were obtained from Green Phyl V.4 \cite{Conte2008b, Conte2008a, Rouard2011}, selecting sequences without spliced forms.
+
+\subsection{SNP analyses}
+SNPs and their effects for African rices were extracted from \cite{Cubry2017} and from \cite{3kRGP} for Asian rices. These data were then crossed with the gene list using the BEDtools suite \cite{REF}.
 
 \subsection*{Availability of scripts}
 The whole bash, Perl and R scripts are available on github under Cecill-B/GPLv3 double licenses on the GitHub of the project: \url{HTTP}
