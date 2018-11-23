@@ -141,12 +141,7 @@ One hundred and sixty-three accessions of \textit{Oryza glaberrima} and 83 acces
 DNA was sequenced at the Genoscope (Evry, France) on Illumina HiSeq 2000/2500/400 with paired-end reads, 100-150 bases long, and cleaned as described in \cite{Cubry2018, Djedatin2017}. Briefly, the mean sequencing depth is of 35x with a maximum of 60x, representing a total of XXXX,XXXX and XXXX reads and YYYYY bases. The data were cleaned as described in \cite{Cubry2018, Djedatin2017}.
 
 \subsection*{Short reads mapping}
-<<<<<<< HEAD
 Cleaned reads were then mapped against the Asian reference genome (Os-Nipponbare-Reference-IRGSP-1.0/MSU7.0 \cite{Mcnally2009, Kawahara2013}) through a dedicated TOGGLe pipeline \cite{Monat2015, Tranchant2018}, as follows: mapping with BWA aln/sampe legacy \cite{Li2009} (edit distance of 5 bases, insert size of 500 bases), conversion into BAM file and sorting by coordinates with PicardTools (!!REF!!) (for details information about mapping see Supplementary Data S3).
-=======
-Cleaned reads were then mapped against the Asian reference genome (Os-Nipponbare-Reference-IRGSP-1.0/MSU7.0 \cite{Mcnally2009, Kawahara2013}) through a dedicated TOGGLe pipeline \cite{Monat2015, Tranchant2018}, as follows:
-FASTQC control, CutAdapt for removing low-quality reads, repairing step to mate pairs, mapping with BWA aln/sampe legacy \cite{Li2009} (edit distance of 5 bases), conversion into BAM file with Picardtools (!!REF!!), extraction of properly and unproperly mapped in pair data with SAMtools \cite{Li2009a}. Properly mapped in pair reads were subject to  local realignment using GATK \cite{McKenna2010a}, duplicates removed with Picardtools (for details information about mapping see Supplementary Data S3).
->>>>>>> a76acfe49e8383161b1b31ff0636f46a9e3d6b76
 
 
 \subsection*{Reads count and normalization}
