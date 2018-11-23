@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+Case mismatch error between cite keys 3kRGP and 3krgp
+---line 26 of file main.aux
+ : \citation{3kRGP
+ :                }
+I'm skipping whatever remains of this command
+The style file: apalike.bst
+Database file #1: biblioArticlePanG.bib.bib
+Warning--I didn't find a database entry for "REFpangenome"
+Warning--I didn't find a database entry for "Tranchant2018"
+Warning--I didn't find a database entry for "Han2018"
+Warning--I didn't find a database entry for "3krgp"
+Warning--I didn't find a database entry for "Djedatin2017"
+Warning--empty journal in Mcnally2009
+Warning--empty publisher in Quinlan2014
+You've used 13 entries,
+            1935 wiz_defined-function locations,
+            572 strings with 8784 characters,
+and the built_in function-call counts, 8615 in all, are:
+= -- 712
+> -- 808
+< -- 5
++ -- 309
+- -- 308
+* -- 908
+:= -- 1591
+add.period$ -- 38
+call.type$ -- 13
+change.case$ -- 216
+chr.to.int$ -- 12
+cite$ -- 15
+duplicate$ -- 183
+empty$ -- 334
+format.name$ -- 325
+if$ -- 1532
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 12
+newline$ -- 67
+num.names$ -- 39
+pop$ -- 205
+preamble$ -- 1
+purify$ -- 219
+quote$ -- 0
+skip$ -- 140
+stack$ -- 0
+substring$ -- 315
+swap$ -- 20
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 76
+warning$ -- 2
+while$ -- 41
+width$ -- 0
+write$ -- 165
+(There was 1 error message)

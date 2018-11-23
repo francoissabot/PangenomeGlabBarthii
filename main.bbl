@@ -1,0 +1,102 @@
+\begin{thebibliography}{}
+
+\bibitem[Alexa and Rahnenfuhrer, 2016]{Alexa2016}
+Alexa, A. and Rahnenfuhrer, J. (2016).
+\newblock {\em topGO: Enrichment Analysis for Gene Ontology}.
+\newblock R package version 2.24.0.
+
+\bibitem[Conte et~al., 2008a]{Conte2008b}
+Conte, M.~G., Gaillard, S., Droc, G., and Perin, C. (2008a).
+\newblock {Phylogenomics of plant genomes: a methodology for genome-wide
+  searches for orthologs in plants.}
+\newblock {\em BMC genomics}, 9:183.
+
+\bibitem[Conte et~al., 2008b]{Conte2008a}
+Conte, M.~G., Gaillard, S., Lanau, N., Rouard, M., and P{\'{e}}rin, C. (2008b).
+\newblock {GreenPhylDB: A database for plant comparative genomics}.
+\newblock {\em Nucleic Acids Research}, 36(SUPPL. 1):991--998.
+
+\bibitem[Cubry et~al., 2018]{Cubry2018}
+Cubry, P., Tranchant-Dubreuil, C., Thuillet, A.-C., Monat, C., Ndjiondjop,
+  M.-N., Labadie, K., Cruaud, C., Engelen, S., Scarcelli, N., Rhon{\'{e}}, B.,
+  Burgarella, C., Dupuy, C., Larmande, P., Wincker, P., Fran{\c{c}}ois, O.,
+  Sabot, F., and Vigouroux, Y. (2018).
+\newblock {The Rise and Fall of African Rice Cultivation Revealed by Analysis
+  of 246 New Genomes}.
+\newblock {\em Current Biology}.
+
+\bibitem[Kawahara et~al., 2013]{Kawahara2013}
+Kawahara, Y., de~la Bastide, M., Hamilton, J.~P., Kanamori, H., McCombie,
+  W.~R., Ouyang, S., Schwartz, D.~C., Tanaka, T., Wu, J., Zhou, S., Childs,
+  K.~L., Davidson, R.~M., Lin, H., Quesada-Ocampo, L., Vaillancourt, B., Sakai,
+  H., Lee, S.~S., Kim, J., Numa, H., Itoh, T., Buell, C.~R., and Matsumoto, T.
+  (2013).
+\newblock {Improvement of the Oryza sativa Nipponbare reference genome using
+  next generation sequence and optical map data.}
+\newblock {\em Rice (New York, N.Y.)}, 6(1):4.
+
+\bibitem[Li and Durbin, 2009]{Li2009}
+Li, H. and Durbin, R. (2009).
+\newblock {Fast and accurate short read alignment with Burrows-Wheeler
+  transform.}
+\newblock {\em Bioinformatics (Oxford, England)}, 25(14):1754--60.
+
+\bibitem[Mcnally et~al., 2009]{Mcnally2009}
+Mcnally, K.~L., Childs, K.~L., Bohnert, R., Davidson, R.~M., Zhao, K., Ulat,
+  V.~J., Zeller, G., Clark, R.~M., Hoen, D.~R., Bureau, T.~E., Stokowski, R.,
+  Ballinger, D.~G., Frazer, K.~A., Cox, D.~R., Padhukasahasram, B., Bustamante,
+  C.~D., Weigel, D., Mackill, D.~J., Buell, C.~R., Leung, H., Leach, J.~E.,
+  Bruskiewich, R.~M., and Ra, G. (2009).
+\newblock {Genomewide SNP variation reveals relationships among landraces and
+  modern varieties of rice}.
+\newblock pages 1--6.
+
+\bibitem[Monat et~al., 2015]{Monat2015}
+Monat, C., Tranchant-Dubreuil, C., Kougbeadjo, A., Farcy, C., Ortega-Abboud,
+  E., Amanzougarene, S., Ravel, S., Agbessi, M., Orjuela-Bouniol, J., Summo,
+  M., and Sabot, F. (2015).
+\newblock {TOGGLE: toolbox for generic NGS analyses}.
+\newblock {\em BMC Bioinformatics}, 16.
+
+\bibitem[Orjuela et~al., 2014]{Orjuela2014}
+Orjuela, J., Sabot, F., Ch{\'{e}}ron, S., Vigouroux, Y., Adam, H., Chrestin,
+  H., Sanni, K., Lorieux, M., and Ghesqui{\`{e}}re, A. (2014).
+\newblock {An extensive analysis of the African rice genetic diversity through
+  a global genotyping.}
+\newblock {\em TAG. Theoretical and applied genetics. Theoretische und
+  angewandte Genetik}, 127(10):2211--23.
+
+\bibitem[Quinlan, 2014]{Quinlan2014}
+Quinlan, A.~R. (2014).
+\newblock {\em {BEDTools: The Swiss-Army Tool for Genome Feature Analysis.}},
+  volume~47.
+
+\bibitem[Rouard et~al., 2011]{Rouard2011}
+Rouard, M., Guignon, V., Aluome, C., Laporte, M.~A., Droc, G., Walde, C.,
+  Zmasek, C.~M., P{\'{e}}rin, C., and Conte, M.~G. (2011).
+\newblock {GreenPhylDB v2.0: Comparative and functional genomics in plants}.
+\newblock {\em Nucleic Acids Research}, 39(SUPPL. 1):1095--1102.
+
+\bibitem[Tettelin et~al., 2005]{Tettelin2005}
+Tettelin, H., Masignani, V., Cieslewicz, M.~J., Donati, C., Medini, D., Ward,
+  N.~L., Angiuoli, S.~V., Crabtree, J., Jones, A.~L., Durkin, a.~S., Deboy,
+  R.~T., Davidsen, T.~M., Mora, M., Scarselli, M., {Margarit y Ros}, I.,
+  Peterson, J.~D., Hauser, C.~R., Sundaram, J.~P., Nelson, W.~C., Madupu, R.,
+  Brinkac, L.~M., Dodson, R.~J., Rosovitz, M.~J., Sullivan, S.~a., Daugherty,
+  S.~C., Haft, D.~H., Selengut, J., Gwinn, M.~L., Zhou, L., Zafar, N., Khouri,
+  H., Radune, D., Dimitrov, G., Watkins, K., O'Connor, K. J.~B., Smith, S.,
+  Utterback, T.~R., White, O., Rubens, C.~E., Grandi, G., Madoff, L.~C.,
+  Kasper, D.~L., Telford, J.~L., Wessels, M.~R., Rappuoli, R., and Fraser,
+  C.~M. (2005).
+\newblock {Genome analysis of multiple pathogenic isolates of Streptococcus
+  agalactiae: implications for the microbial "pan-genome".}
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America}, 102(39):13950--5.
+
+\bibitem[with contributions~from Andrew J.~Bass et~al., 2015]{Storey2015}
+with contributions~from Andrew J.~Bass, J. D.~S., Dabney, A., and Robinson, D.
+  (2015).
+\newblock {\em qvalue: Q-value estimation for false discovery rate control}.
+\newblock R package version 2.4.2.
+
+\end{thebibliography}
