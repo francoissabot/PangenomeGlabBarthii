@@ -86,7 +86,7 @@ Stefan Engelen\textsuperscript{3},
 Karine Labadie\textsuperscript{3},
 Patrick Wincker\textsuperscript{3},
 Ndomassi Tando\textsuperscript{1,2},
-Emmanuel Paradis\textsuperscript{4,5},
+Emmanuel Paradis\textsuperscript{4},
 and François Sabot\textsuperscript{1,2*}
 \\
 \bigskip
@@ -99,7 +99,7 @@ and François Sabot\textsuperscript{1,2*}
 \bf{4} ISE-M, Univ of Montpellier, CNRS, IRD, EPHE, Montpellier, France
 \\
 \bigskip
-* Corresponding author: francois.sabot@ird.fr\\
+* Corresponding author: \url{francois.sabot@ird.fr}\\
 {+} Present address: Leibniz Institute of Plant Genetics and Crop Plant Research (IPK) Gatersleben, Seeland, Germany\\
 \textdagger Those three authors contribute equally to the work\\
 \end{flushleft}
@@ -112,9 +112,8 @@ and François Sabot\textsuperscript{1,2*}
 
 % the * after section prevents numbering
 \section*{Introduction}
-Rice is the first staple food for humanity, with almost 80\% of humanity relying o it for 20\% of its daily energetic income. Two species are cultivated, the Asian Rice \textit{Oryza sativa}, worldwide, and the African Rice \textit{O. glaberrima}. Domestication of these two species occured independantly from two different wild related, \textit{O. rufipogon} and \textit{O. barthii}, respectively (REF).
-Diversity loss/founder effect/genetic drift....
-However, most previous analyses of domestication impact on diversity were limited to few markers or SNP-based. Recent papers \cite{REFpangenome} shown that the diversity is not only linked to the SNP and short InDels, but also to Presence/Absence Variations (PAV) and Copy Number Variation (CNV). This lead to the idea of Pangenome \cite{Tettelin2005, Tranchant2018}, composed of the core genome, genomic sequences shared between all individuals of the considered group, and of the dispensable genome, genomic sequences shared between some individuals (or even only one) but not all. Currently, only a few studies focused on the pangenome of plants, and only one, to our knowledge \cite{Han2018}....
+Rice is the first staple food for humanity, with almost 80\% of humanity relying o it for 20\% of its daily energetic income. Two species are cultivated, the Asian Rice \textit{Oryza sativa}, worldwide, and the African Rice \textit{O. glaberrima}. Domestication of these two species occured independantly from two different wild related, \textit{O. rufipogon} and \textit{O. barthii}, respectively (REF). As shown previously (REF Glemin), domestication impacts the diversity of the domesticated species, reducing it drasticly \cite{Cubry2018}, through founder effect and genetic drift. In addition, the domestication is linked to an increase of deleterious alleles, known as the doemstication weight (REF).
+However, most previous analyses of domestication impact on diversity were limited to few markers (SSR, RFLP, AFLP) or SNP-based. Recent papers \cite{REFpangenome} shown that the diversity is not only linked to the SNP and short InDels, but also to Presence/Absence Variations (PAV) and Copy Number Variation (CNV) \cite{Tranchand2019}. This lead to the idea of Pangenome \cite{Tettelin2005, Tranchant2019}, composed of the core genome, genomic sequences shared between all individuals of the considered group, and of the dispensable genome, genomic sequences shared between some individuals (or even only one) but not all. Currently, only a few studies focused on the pangenome of plants, and only one, to our knowledge \cite{Han2018}....
 
 In this paper, we benefit of the release of very large scale data on the two domesticated rice species, the Asian rice \textit{Oryza sativa} \cite{3krgp} and the African one \textit{O. glaberrima} \cite{Cubry2018}, and on their respective wild relatives, \textit{O. rufipogon} (this paper) and \textit{O. barthii} \cite{Cubry2018}, to explore the impact of domestication on the core genome of cultivated.
 % Pangenome \cite{Tettelin2005,Tranchant2018} is defined as the whole set of DNA sequence present in a given group (such as a species). This pangenome is further divided in three compartments:(\textit{i}) the core-genome, composed of sequences present in all individuals of the group; (\textit{ii}) the dispensable/variable/accessory-genome, sequences present in some but not all of the individuals; and (\textit{iii}) the individual-specific genome, accounting for sequences present only in a single individual of the group. It has been first defined on microorganism \cite{Tettelin2005} and is now commonly used on bacteria with some specifics tools developed for this type of analysis \cite{Laing2010, Snipen2010, Zhao2012,Sarovich2014, Hennig2015, Thakur2016}. Few studies also started on other genera like animals \cite{Boussaha2015}, Human \cite{Li2010}, viruses \cite{Aherfi2014}, algae \cite{Wang2014a}, fungi \cite{Upadhyaya2015} and plants \cite{Cheung2009, Yao2010, Montenegro2017}.
@@ -149,10 +148,10 @@ Cleaned reads were then mapped against the Asian reference genome (Os-Nipponbare
 The reads count for each individual on 10kb bin (38,000 for a roughly 380Mb genome) were generated with the multicov tool from BEDTOOLS \cite{Quinlan2014}. Counts were normalized to 1 million total reads according to the initial individual sequencing coverage to obtain FP10KM values (Features per 10 kilobase per millions of reads).
 
 \subsection*{Bootstrapping and subsampling}
-All subsamplings and bootstrapping to were performed from the read count table, with random choice, using truely random selection scripts. 
+All subsamplings and bootstrapping were performed from the read count table, with random choice, using truely random selection home-made scripts. 
 
 \subsection*{Pnorm and FDR analysis}
-Pnorm analysis and FDR approach at 5\% were performed using R and specific packages pnorm and qvalue \cite{Storey2015} (VERSION). Bins for which the FP10KM mean were lower than 2 were arbitrarily previously ride out the analysis and considered as absent for all individuals. Pan-matrix obtained shown '0' when bin was considered as absent,  '1' if the bin was considered as present and  'Uk' (Unknown) if feature does not pass the initial pnorm test.
+Pnorm analysis and FDR approach at 5\% were performed using R and specific packages pnorm and qvalue \cite{Storey2015} (VERSION). Bins for which the FP10KM mean were lower than 2 were arbitrarily previously ride out the analysis and considered as absent for all individuals. Pan-matrix obtained shown '0' when bin was considered as absent, '1' if the bin was considered as present and  'Uk' (Unknown) if feature does not pass the initial pnorm test.
 
 \subsection*{GO enrichment analyses}
 Genes underlying the PAV were recovered using the MSUv7 annotation of the IRGSP1.0 assembly (\url{http://rice.plantbiology.msu.edu/})). Gene ontology enrichment analyses were performed using a home-made R script and the topGO package \cite{Alexa2016}, with a display of the 5 top most significant GO retrieved using the Fisher classic and weight01 algorithms.
@@ -162,7 +161,7 @@ GenFam was used...
 Data from gene families were obtained from Green Phyl V.4 \cite{Conte2008b, Conte2008a, Rouard2011}, selecting sequences without spliced forms.
 
 \subsection{SNP analyses}
-SNPs and their effects for African rices were extracted from \cite{Cubry2017} and from \cite{3kRGP} for Asian rices. These data were then crossed with the gene list using the BEDtools suite \cite{REF}.
+SNPs and their effects for African rices were extracted from \cite{Cubry2018} and from \cite{3kRGP} for Asian rices. These data were then crossed with the gene list using the BEDtools suite \cite{Quinlan2014}.
 
 \subsection*{Availability of scripts}
 The whole bash, Perl and R scripts are available on GitHub under Cecill-B/GPLv3 double licenses on the GitHub of the project: \url{HTTP}
@@ -199,7 +198,7 @@ In addition, the subsampling analyses were used to confirm that the difference i
 
 
 
-\subsection*{Identification of domestication-related effects on the pangenome structure}
+\subsection*{Identification of domestication-related effects on the core-genome structure}
 %%%%%%%%%%%%%%%La on compare ce qui a disparu/changé d'un groupe à l'autre: perte de gènes, changement de GO...
 %Et on compare entre les deux domestications!
 
@@ -284,8 +283,7 @@ In addition, the subsampling analyses were used to confirm that the difference i
 
 \section*{Acknowledgments}
 Authors wants to thanks Bénédicte Rhoné for his R script to analyse the GO.
-FINANCIALS!
-
+CM was supported by AFRICROP and LandPanToggle. FS was supported by IRIGIN. ND was supported by CRP RICE
 
 \section*{Authors contributions}
 FS supervized the whole study; KL, SE and PW performed the sequencing and initial QC analyses; CM, ND, CTD, NT, and FS performed the initial bioinformatics treatments; CM, FS and EP developed and implemented the statistical methods; CM, FS and CTD performed analyses on African rices and ND and FS on Asian rices; FS and CM wrote the manuscript; all authors read and validate the current version of the manuscript.
